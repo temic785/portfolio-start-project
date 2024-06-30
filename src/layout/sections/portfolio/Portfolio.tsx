@@ -27,6 +27,4 @@ export const Portfolio = () => {
     </PortfolioStyled>
   );
 };
-const PortfolioStyled = styled.div`
-  min-height: 50vh;
-`;
+const PortfolioStyled = styled.section``;

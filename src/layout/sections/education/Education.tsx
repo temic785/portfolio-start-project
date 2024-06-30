@@ -37,6 +37,4 @@ export const Education = () => {
   );
 };
 
-export const EducationStyled = styled.div`
-  min-height: 50vh;
-`;
+export const EducationStyled = styled.section``;

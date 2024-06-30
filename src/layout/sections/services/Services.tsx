@@ -8,13 +8,13 @@ import { SpanSection } from "../../../components/SpanSection";
 
 export const Services = () => {
   return (
-    <ServicesSection>
+    <StyledServices>
       <TitleSection>My Services</TitleSection>
       <SpanSection>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. lorem ipsum
       </SpanSection>
-      <FlexWrapper wrap="wrap" justify="center">
+      <FlexWrapper wrap="wrap">
         <Service
           iconId="codding"
           title="web development"
@@ -46,11 +46,11 @@ export const Services = () => {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit.Vitae nulla diam in ac dictum a urna viverra morbi."
         />
       </FlexWrapper>
-    </ServicesSection>
+    </StyledServices>
   );
 };
-const ServicesSection = styled.section`
+const StyledServices = styled.section`
   background-color: ${colorTheme.colors.grey.medium};
-  min-height: 100vh;
-  padding-top: 138px;
+  margin-top: 138px;
+  border: 1px solid black;
 `;

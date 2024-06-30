@@ -7,7 +7,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 export const BlogCards = () => {
   return (
     <BlogCardsStyled>
-      <FlexWrapper wrap="wrap" justify="center">
+      <FlexWrapper wrap="wrap">
         <BlogCard
           title="How to make web tempates"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna "

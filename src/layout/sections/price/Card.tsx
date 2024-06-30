@@ -32,8 +32,6 @@ export const Card = (props: CardPropsType) => {
 };
 
 const StyledCard = styled.div`
-  min-height: 609px;
-  min-width: 310px;
   background-color: ${colorTheme.colors.grey.light};
   text-align: center;
 `;

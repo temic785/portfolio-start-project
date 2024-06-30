@@ -35,5 +35,6 @@ const StyledAside = styled.aside`
   background-color: ${colorTheme.colors.grey.light};
   min-width: 305px;
   height: 1315px;
+  position: absolute;
 `;
 const StyledButtonCV = styled.button``;

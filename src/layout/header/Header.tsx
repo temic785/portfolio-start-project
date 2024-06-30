@@ -1,22 +1,23 @@
 import React from "react";
+import { BytonStyled } from "../../components/Byton.styled";
+import { StyledImage } from "../../components/StyledImage.styled";
+import mainImage from "../../assets/images/mainPhoto.webp";
 import styled from "styled-components";
-import { colorTheme } from "../../styles/ThemeStyled";
-import { Menu } from "../../components/menu/Menu";
-
-const items = ["home", "services", "education", "portfolio", "blog", "contact"];
 
 export const Header = () => {
   return (
     <StyledHeader>
-      <Menu menuItems={items} />
+      <span>I’m Rayan Adlrdard</span>
+      <h1>Front-end Developer </h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat
+        feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
+        lectus.
+      </p>
+      <BytonStyled>Hire me &#8594;</BytonStyled>
+      <StyledImage src={mainImage} width="325" height="460"></StyledImage>
     </StyledHeader>
   );
 };
 
-const StyledHeader = styled.header`
-  background-color: ${colorTheme.colors.grey.light};
-  width: 108px;
-  height: 1315px;
-  display: flex;
-  justify-content: center;
-`;
+const StyledHeader = styled.header``;

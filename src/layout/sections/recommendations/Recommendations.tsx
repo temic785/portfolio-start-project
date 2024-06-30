@@ -37,6 +37,4 @@ export const Recommendations = () => {
   );
 };
 
-const RecommendationsStyled = styled.div`
-  min-height: 50vh;
-`;
+const RecommendationsStyled = styled.section``;

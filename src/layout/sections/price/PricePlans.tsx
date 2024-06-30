@@ -38,7 +38,7 @@ const cardItems3 = [
 
 export const PricePlans = () => {
   return (
-    <SectionPrice>
+    <StyledPrice>
       <TitleSection>Price plans</TitleSection>
       <SpanSection>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -67,9 +67,9 @@ optimize web queries"
           menuCardItems={cardItems3}
         />
       </FlexWrapper>
-    </SectionPrice>
+    </StyledPrice>
   );
 };
-const SectionPrice = styled.div`
-  min-height: 100vh;
+const StyledPrice = styled.section`
+  border: 1px solid green;
 `;

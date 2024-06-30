@@ -6,7 +6,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 export const CardsPortfolio = () => {
   return (
     <CardsPortfolioStyled>
-      <FlexWrapper wrap="wrap" justify="center">
+      <FlexWrapper wrap="wrap">
         <CardPortfolio />
         <CardPortfolio />
         <CardPortfolio />
@@ -18,6 +18,4 @@ export const CardsPortfolio = () => {
   );
 };
 
-const CardsPortfolioStyled = styled.div`
-  max-width: 970px;
-`;
+const CardsPortfolioStyled = styled.div``;

@@ -17,6 +17,4 @@ export const Blog = () => {
   );
 };
 
-const BlogStyled = styled.section`
-  min-height: 50vh;
-`;
+const BlogStyled = styled.section``;

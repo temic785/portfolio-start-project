@@ -1,29 +1,36 @@
 import React from "react";
 import styled from "styled-components";
-import mainImage from "../../../assets/images/profile.webp";
-import { StyledImage } from "../../../components/StyledImage.styled";
+import { Container } from "../../../components/Container";
+import { Header } from "../../header/Header";
+import { Services } from "../services/Services";
+import { PricePlans } from "../price/PricePlans";
+import { Recommendations } from "../recommendations/Recommendations";
+import { Education } from "../education/Education";
+import { Work } from "../work/Work";
+import { Portfolio } from "../portfolio/Portfolio";
+import { Blog } from "../blog/Blog";
+import { YourInfo } from "../yourInfo/YourInfo";
+import { Contact } from "../contact/Contact";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { colorTheme } from "../../../styles/ThemeStyled";
-import { BytonStyled } from "../../../components/Byton.styled";
-export const MainMenu = () => {
+import { Footer } from "../../footer/Footer";
+
+export const Main = () => {
   return (
-    <FlexWrapper
-      background={colorTheme.colors.grey.light}
-      width="970px"
-      height="467px"
-    >
-      <div>
-        <span>I’m Rayan Adlrdard</span>
-        <h1>Front-end Developer </h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat
-          feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
-          lectus.
-        </p>
-        <BytonStyled>Hire me &#8594;</BytonStyled>
-      </div>
-      <StyledImage src={mainImage} width="325" height="460"></StyledImage>
-    </FlexWrapper>
+    <Container>
+      <Header />
+      <Services />
+      <PricePlans />
+      <Recommendations />
+      <Education />
+      <Work />
+      <Portfolio />
+      <Blog />
+      <FlexWrapper justify="space-between">
+        <YourInfo />
+        <Contact />
+      </FlexWrapper>
+      <Footer />
+    </Container>
   );
 };
 const MainMenuWrapper = styled.div``;
