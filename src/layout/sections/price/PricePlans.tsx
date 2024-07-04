@@ -3,6 +3,7 @@ import { TitleSection } from "../../../components/TitleSection";
 import { SpanSection } from "../../../components/SpanSection";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Card } from "./Card";
+import { colorTheme } from "../../../styles/ThemeStyled";
 
 const cardItems = [
   { icon: "check", span: "UI Design" },
@@ -39,37 +40,38 @@ const cardItems3 = [
 export const PricePlans = () => {
   return (
     <StyledPrice>
-      <TitleSection>Price plans</TitleSection>
-      <SpanSection>
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. lorem ipsum
-      </SpanSection>
-      <FlexWrapper>
-        <Card
-          title="silver"
-          price="0.00"
-          description="For most businesses that want to
+      <FlexWrapper direction="column" align="center">
+        <TitleSection>Price plans</TitleSection>
+        <SpanSection>
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia consequat duis enim velit mollit. lorem ipsum
+        </SpanSection>
+        <FlexWrapper justify="space-between" width="100%">
+          <Card
+            title="Silver"
+            price="0.00"
+            description="For most businesses that want to
 optimize web queries"
-          menuCardItems={cardItems}
-        />
-        <Card
-          title="gold"
-          price="50.00"
-          description="For most businesses that want to
+            menuCardItems={cardItems}
+          />
+          <Card
+            title="Gold"
+            price="50.00"
+            description="For most businesses that want to
 optimize web queries"
-          menuCardItems={cardItems2}
-        />
-        <Card
-          title="dimond"
-          price="80.00"
-          description="For most businesses that want to
+            myBtnType={colorTheme.colors.primary}
+            menuCardItems={cardItems2}
+          />
+          <Card
+            title="Dimond"
+            price="80.00"
+            description="For most businesses that want to
 optimize web queries"
-          menuCardItems={cardItems3}
-        />
+            menuCardItems={cardItems3}
+          />
+        </FlexWrapper>
       </FlexWrapper>
     </StyledPrice>
   );
 };
-const StyledPrice = styled.section`
-  border: 1px solid green;
-`;
+const StyledPrice = styled.section``;

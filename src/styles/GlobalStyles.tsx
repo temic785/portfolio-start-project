@@ -20,8 +20,15 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    color:${colorTheme.colors.grey.dark}
+    color:${colorTheme.colors.grey.dark};
+    line-height: 1.2;
+    text-transform: capitalize;
     }
+
+    section{
+        padding:70px 0 0 0;
+    }
+
     a{
         text-decoration:none;
     }
@@ -31,8 +38,10 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     button{
-        /* background-color:unset;
-        border:none; */
+        background-color:unset;
+        border:none;
+        border-radius:5px;
+        
     }
 
     `;

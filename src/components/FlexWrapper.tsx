@@ -9,6 +9,7 @@ type FlexWrapper = {
   width?: string;
   height?: string;
   marg?: string;
+  gap?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapper>`
@@ -19,6 +20,9 @@ export const FlexWrapper = styled.div<FlexWrapper>`
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   background-color: ${(props) => props.background};
   width: ${(props) => props.width};
-  height: ${(props) => props.height};
   margin: ${(props) => props.marg};
+  height: ${(props) => props.height || "100%"};
+  outline: 1px solid green;
+  margin: ${(props) => props.marg};
+  gap: ${(props) => props.gap};
 `;
