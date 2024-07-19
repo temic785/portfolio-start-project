@@ -7,17 +7,23 @@ type CardItems = {
   icon: string;
   span: string;
 };
+
 type CardPropsType = {
   title: string;
   price: string;
   description: string;
   myBtnType?: string;
+  mostPop?: string;
   menuCardItems: CardItems[];
+};
+type PriceButtonProps = {
+  myBtnType?: string;
 };
 
 export const Card = (props: CardPropsType) => {
   return (
     <StyledCard>
+      <Psevdo>{props.mostPop}</Psevdo>
       <FlexWrapper direction="column" align="center">
         <TitleCard>{props.title}</TitleCard>
         <PriceCard>
@@ -32,16 +38,34 @@ export const Card = (props: CardPropsType) => {
   );
 };
 
+const Psevdo = styled.div``;
+
+const TitleCard = styled.h3`
+  font-size: 24px;
+  color: #2b2b2b;
+`;
+
 const StyledCard = styled.div`
   background-color: ${colorTheme.colors.grey.light};
   text-align: center;
   padding-top: 54px;
   min-width: 310px;
-`;
+  &:nth-child(2) {
+    padding: 0;
+  }
 
-const TitleCard = styled.h3`
-  font-size: 24px;
-  color: #2b2b2b;
+  &:nth-child(2) ${Psevdo} {
+    background-color: ${colorTheme.colors.primary};
+    color: ${colorTheme.colors.secondary};
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:nth-child(2) ${TitleCard} {
+    padding-top: 25px;
+  }
 `;
 
 const PriceCard = styled.span`
@@ -63,7 +87,7 @@ const TextCard = styled.p`
   padding-bottom: 21px;
 `;
 
-const PriceButton = styled.button<CardPropsType>`
+const PriceButton = styled.button<PriceButtonProps>`
   min-width: 169px;
   min-height: 38px;
 

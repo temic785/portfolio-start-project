@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { TitleH4 } from "../../../components/TitleH4";
 import { TitleP } from "../../../components/TitleP";
 import { Icon } from "../../../components/icon/icon";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -26,15 +25,15 @@ export const CardContact = (props: CardContactPropsType) => {
         viewBox={"0 0 17px 15px"}
       />
       <FlexWrapper direction="row" align="center" justify="space-between">
-        <TitleH4>{props.contInf1}</TitleH4>
+        {/* <TitleH4>{props.contInf1}</TitleH4> */}
         <TitleP>{props.contVal1}</TitleP>
       </FlexWrapper>
       <FlexWrapper direction="row" align="center" justify="space-between">
-        <TitleH4>{props.contInf2}</TitleH4>
+        {/* <TitleH4>{props.contInf2}</TitleH4> */}
         <TitleP>{props.contVal2}</TitleP>
       </FlexWrapper>
       <FlexWrapper direction="row" align="center" justify="space-between">
-        <TitleH4>{props.contInf3}</TitleH4>
+        {/* <TitleH4>{props.contInf3}</TitleH4> */}
         <TitleP>{props.contVal3}</TitleP>
       </FlexWrapper>
     </CardContactStyled>
@@ -42,5 +41,5 @@ export const CardContact = (props: CardContactPropsType) => {
 };
 
 const CardContactStyled = styled.div`
-  background-color: ${colorTheme.colors.while};
+  background-color: ${colorTheme.colors.white};
 `;

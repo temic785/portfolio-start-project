@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SpanSection } from "../../../components/SpanSection";
+import { DescriptionSection } from "../../../components/DescriptionSection";
 import { TitleSection } from "../../../components/TitleSection";
 import { ListPortfolio } from "./elementsPortfolio/ListPortfolio";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -18,10 +18,10 @@ export const Portfolio = () => {
   return (
     <PortfolioStyled>
       <TitleSection>Portfolio</TitleSection>
-      <SpanSection>
+      <DescriptionSection>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. lorem ipsum
-      </SpanSection>
+      </DescriptionSection>
       <ListPortfolio listItems={arrList} />
       <CardsPortfolio />
     </PortfolioStyled>

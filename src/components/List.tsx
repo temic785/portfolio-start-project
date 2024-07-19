@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Icon } from "./icon/icon";
 import { FlexWrapper } from "./FlexWrapper";
+import { colorTheme } from "../styles/ThemeStyled";
 
 type Test = {
   icon: string;
@@ -24,7 +25,9 @@ export const List = (props: ListPropsType) => {
                 height={"25px"}
                 viewBox={"0 0 25px 13px"}
               />
-              <ServiceName>{iconItems.span}</ServiceName>
+              <ServiceName hasIcon={iconItems.icon}>
+                {iconItems.span}
+              </ServiceName>
             </FlexWrapper>
           </StyledLi>
         );
@@ -45,4 +48,7 @@ const StyledLi = styled.li`
     margin-bottom: 0;
   }
 `;
-const ServiceName = styled.span``;
+const ServiceName = styled.span<{ hasIcon: string }>`
+  color: ${(props) =>
+    props.hasIcon === "check" ? colorTheme.colors.secondary : ""};
+`;

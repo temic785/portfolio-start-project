@@ -35,7 +35,7 @@ export const Header = () => {
 const StyledHeader = styled.header`
   display: flex;
   justify-content: space-around;
-  background-color: ${colorTheme.colors.while};
+  background-color: ${colorTheme.colors.white};
 `;
 
 const Greetings = styled.div``;

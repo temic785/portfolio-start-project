@@ -1,11 +1,7 @@
 import styled from "styled-components";
-type TitlePPropsType = {
-  align?: string;
-};
 
-export const TitleP = styled.p<TitlePPropsType>`
+export const TitleP = styled.p`
   font-size: 15px;
   color: #767676;
   max-width: 248px;
-  text-align: ${(props) => props.align || "start"};
 `;

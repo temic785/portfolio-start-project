@@ -28,6 +28,7 @@ export const GlobalStyles = createGlobalStyle`
     section{
         padding:70px 0 0 0;
     }
+    
 
     a{
         text-decoration:none;
@@ -41,7 +42,22 @@ export const GlobalStyles = createGlobalStyle`
         background-color:unset;
         border:none;
         border-radius:5px;
-        
+        cursor:pointer;
     }
 
+    p{
+        font-size: 15px;
+        font-weight: 400;
+        color:${colorTheme.colors.grey.dark}
+    }
+
+    span{
+        color:${colorTheme.colors.secondary}
+    }
+    
+    h3{
+        color:${colorTheme.colors.secondary};
+        font-size:18px;
+        font-weight:500;
+    }
     `;

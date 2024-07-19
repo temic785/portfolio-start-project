@@ -3,7 +3,6 @@ import sidebarImg from "../../assets/images/profile.webp";
 import styled from "styled-components";
 import { colorTheme } from "../../styles/ThemeStyled";
 import { StyledImage } from "../../components/StyledImage.styled";
-import { TitleH4 } from "../../components/TitleH4";
 import { TitleP } from "../../components/TitleP";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { ListSocial } from "./ListSocial";
@@ -20,11 +19,11 @@ export const Sidebar = () => {
           height="150"
           alt="My phototo"
         />
-        <TitleH4>Rayan Adlardard</TitleH4>
+        <p>Rayan Adlardard</p>
         <TitleP>Font-end Developer</TitleP>
         <ListSocial />
         <About />
-        <TitleH4>Extra Skills</TitleH4>
+        <p>Extra Skills</p>
         <ExtraSkills />
         <StyledButtonCV type={"submit"}>Download cv</StyledButtonCV>
       </FlexWrapper>

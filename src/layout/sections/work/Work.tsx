@@ -1,7 +1,7 @@
 import React from "react";
 import { EducationStyled } from "../education/Education";
 import { TitleSection } from "../../../components/TitleSection";
-import { SpanSection } from "../../../components/SpanSection";
+import { DescriptionSection } from "../../../components/DescriptionSection";
 import { EducationPlace } from "../education/EducationPlace";
 import styled from "styled-components";
 
@@ -9,10 +9,10 @@ export const Work = () => {
   return (
     <EducationStyled>
       <TitleSection>Work History</TitleSection>
-      <SpanSection>
+      <DescriptionSection>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. lorem ipsum
-      </SpanSection>
+      </DescriptionSection>
       <EducationPlace
         title="Lead Web Designer"
         student="Student"

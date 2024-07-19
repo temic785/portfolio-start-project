@@ -11,7 +11,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: ${colorTheme.colors.while};
+  background-color: ${colorTheme.colors.white};
   min-height: 60px;
   text-align: center;
 `;

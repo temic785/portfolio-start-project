@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { TitleSection } from "../../../components/TitleSection";
-import { SpanSection } from "../../../components/SpanSection";
+import { DescriptionSection } from "../../../components/DescriptionSection";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Card } from "./Card";
 import { colorTheme } from "../../../styles/ThemeStyled";
@@ -42,10 +42,10 @@ export const PricePlans = () => {
     <StyledPrice>
       <FlexWrapper direction="column" align="center">
         <TitleSection>Price plans</TitleSection>
-        <SpanSection>
+        <DescriptionSection>
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
-        </SpanSection>
+        </DescriptionSection>
         <FlexWrapper justify="space-between" width="100%">
           <Card
             title="Silver"
@@ -61,6 +61,7 @@ optimize web queries"
 optimize web queries"
             myBtnType={colorTheme.colors.primary}
             menuCardItems={cardItems2}
+            mostPop="Most Popular"
           />
           <Card
             title="Dimond"

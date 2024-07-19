@@ -10,6 +10,7 @@ type FlexWrapper = {
   height?: string;
   marg?: string;
   gap?: string;
+  pad?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapper>`
@@ -22,7 +23,8 @@ export const FlexWrapper = styled.div<FlexWrapper>`
   width: ${(props) => props.width};
   margin: ${(props) => props.marg};
   height: ${(props) => props.height || "100%"};
-  outline: 1px solid green;
+  /* outline: 1px solid green; */
   margin: ${(props) => props.marg};
   gap: ${(props) => props.gap};
+  padding: ${(props) => props.pad};
 `;

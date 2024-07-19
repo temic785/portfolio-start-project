@@ -2,32 +2,44 @@ import React from "react";
 import { StyledImage } from "../../../../components/StyledImage.styled";
 import mainImage from "../../../../assets/images/portfolio6.webp";
 import styled from "styled-components";
-import { TitleH4 } from "../../../../components/TitleH4";
 import { TitleP } from "../../../../components/TitleP";
 import { colorTheme } from "../../../../styles/ThemeStyled";
+import { TitleH3 } from "../../../../components/TitleH3";
+import { MainButton } from "../../../../components/MainButton";
 
 type BlogCardPropsType = {
   title: string;
   description: string;
+  srcImg: string;
 };
 
 export const BlogCard = (props: BlogCardPropsType) => {
   return (
     <BlogCardStyled>
-      <StyledImage src={mainImage} width="310" height="300"></StyledImage>
-      <TitleH4>{props.title}</TitleH4>
-      <TitleP>{props.description}</TitleP>
-      <button>Learn more</button>
+      <StyledImage src={props.srcImg} width="310" height="300"></StyledImage>
+      <BlockInfo>
+        <TitleH3>{props.title}</TitleH3>
+        <TitleP>{props.description}</TitleP>
+        <MainButton>
+          <ButtonLink>Learn more &rsaquo;</ButtonLink>
+        </MainButton>
+      </BlockInfo>
     </BlogCardStyled>
   );
 };
 const BlogCardStyled = styled.div`
-  width: 33%;
-  max-width: 310px;
-  min-height: 310px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: ${colorTheme.colors.while};
+  background-color: ${colorTheme.colors.white};
+  ${TitleP} {
+    padding: 8px 0;
+  }
+  ${MainButton} {
+    color: ${colorTheme.colors.primary};
+  }
 `;
+const BlockInfo = styled.div`
+  padding: 25px 35px 15px 25px;
+`;
+const ButtonLink = styled.a``;

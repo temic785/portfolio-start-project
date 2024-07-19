@@ -1,17 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { TitleSection } from "../../../components/TitleSection";
-import { SpanSection } from "../../../components/SpanSection";
+import { DescriptionSection } from "../../../components/DescriptionSection";
 import { BlogCards } from "./blogCards/BlogCards";
 
 export const Blog = () => {
   return (
     <BlogStyled>
       <TitleSection>Blog</TitleSection>
-      <SpanSection>
+      <DescriptionSection>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
         sint. Velit officia consequat duis enim velit mollit. lorem ipsum
-      </SpanSection>
+      </DescriptionSection>
       <BlogCards />
     </BlogStyled>
   );

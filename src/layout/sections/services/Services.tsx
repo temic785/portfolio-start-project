@@ -4,17 +4,17 @@ import { Icon } from "../../../components/icon/icon";
 import { TitleSection } from "../../../components/TitleSection";
 import { Service } from "./service/Service";
 import { colorTheme } from "../../../styles/ThemeStyled";
-import { SpanSection } from "../../../components/SpanSection";
+import { DescriptionSection } from "../../../components/DescriptionSection";
 
 export const Services = () => {
   return (
     <StyledServices>
       <FlexWrapper direction="column" align="center">
         <TitleSection>My Services</TitleSection>
-        <SpanSection>
+        <DescriptionSection>
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
-        </SpanSection>
+        </DescriptionSection>
         <FlexWrapper wrap="wrap" justify="space-between">
           <Service
             iconId="codding"
