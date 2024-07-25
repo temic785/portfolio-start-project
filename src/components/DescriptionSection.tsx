@@ -6,8 +6,7 @@ export const DescriptionSection = styled.p`
   color: ${colorTheme.colors.grey.dark};
   display: flex;
   text-align: center;
-  margin: 25px auto 50px;
-  outline: 1px solid black;
+  margin: 30px auto 50px;
   font-weight: 400;
   max-width: 438px;
   line-height: 1.3;

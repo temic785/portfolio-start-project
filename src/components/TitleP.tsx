@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { colorTheme } from "../styles/ThemeStyled";
 
 export const TitleP = styled.p`
   font-size: 15px;
-  color: #767676;
+  color: ${colorTheme.colors.grey.dark};
   max-width: 248px;
 `;

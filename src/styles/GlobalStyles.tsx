@@ -32,6 +32,7 @@ export const GlobalStyles = createGlobalStyle`
 
     a{
         text-decoration:none;
+        cursor: pointer;
     }
 
     ul{
@@ -41,8 +42,11 @@ export const GlobalStyles = createGlobalStyle`
     button{
         background-color:unset;
         border:none;
-        border-radius:5px;
         cursor:pointer;
+        text-transform: uppercase;
+        font-family: "Inter";
+
+
     }
 
     p{
@@ -59,5 +63,10 @@ export const GlobalStyles = createGlobalStyle`
         color:${colorTheme.colors.secondary};
         font-size:18px;
         font-weight:500;
+    }
+
+    input, form, textarea {
+        outline: none;
+        border:none;
     }
     `;

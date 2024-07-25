@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { TitleSection } from "../../../components/TitleSection";
-import { Card } from "../price/Card";
+import { TitleSection } from "../../../../components/TitleSection";
 import { CardContact } from "./CardContackt";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
 
-export class Contact extends Component {
-  render() {
-    return (
-      <ContactStyled>
-        <TitleSection>Contact information</TitleSection>
+export const Contact = () => {
+  return (
+    <ContactStyled>
+      <TitleSection>Contact information</TitleSection>
+      <FlexWrapper direction="column" gap="18px">
         <CardContact
           iconId="map"
           contInf1="Country:"
@@ -36,11 +36,15 @@ export class Contact extends Component {
           contInf3="Personal:"
           contVal3="+58 (021)356 587 235"
         />
-      </ContactStyled>
-    );
-  }
-}
+      </FlexWrapper>
+    </ContactStyled>
+  );
+};
 
-const ContactStyled = styled.section`
-  min-height: 50vh;
+const ContactStyled = styled.div`
+  min-width: 370px;
+  ${TitleSection} {
+    text-align: start;
+    margin-bottom: 50px;
+  }
 `;

@@ -5,7 +5,7 @@ import { colorTheme } from "../../styles/ThemeStyled";
 export const Footer = () => {
   return (
     <StyledFooter>
-      <StyledSmall>© 2021 All Rights Reserved.Ojjomedia</StyledSmall>
+      <StyledSmall>© 2024 All Rights Reserved.Ojjomedia</StyledSmall>
     </StyledFooter>
   );
 };
@@ -13,6 +13,13 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   background-color: ${colorTheme.colors.white};
   min-height: 60px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
-const StyledSmall = styled.small``;
+const StyledSmall = styled.small`
+  color: ${colorTheme.colors.secondary};
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+`;

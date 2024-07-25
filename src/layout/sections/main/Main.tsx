@@ -9,10 +9,9 @@ import { Education } from "../education/Education";
 import { Work } from "../work/Work";
 import { Portfolio } from "../portfolio/Portfolio";
 import { Blog } from "../blog/Blog";
-import { YourInfo } from "../yourInfo/YourInfo";
-import { Contact } from "../contact/Contact";
-import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Footer } from "../../footer/Footer";
+import { YourInfo } from "../yourContact/yourInfo/YourInfo";
+import { MyMap } from "../myMap/MyMap";
 
 export const Main = () => {
   return (
@@ -25,10 +24,8 @@ export const Main = () => {
       <Work />
       <Portfolio />
       <Blog />
-      <FlexWrapper justify="space-between">
-        <YourInfo />
-        <Contact />
-      </FlexWrapper>
+      <YourInfo />
+      <MyMap />
       <Footer />
     </Container>
   );

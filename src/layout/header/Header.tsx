@@ -65,4 +65,5 @@ export const ButtonStyled = styled.button`
   text-transform: uppercase;
   background-color: ${colorTheme.colors.primary};
   font-weight: 500;
+  border-radius: 5px;
 `;

@@ -20,9 +20,7 @@ export const BlogCard = (props: BlogCardPropsType) => {
       <BlockInfo>
         <TitleH3>{props.title}</TitleH3>
         <TitleP>{props.description}</TitleP>
-        <MainButton>
-          <ButtonLink>Learn more &rsaquo;</ButtonLink>
-        </MainButton>
+        <ButtonLink>Learn more &rsaquo;</ButtonLink>
       </BlockInfo>
     </BlogCardStyled>
   );
@@ -35,11 +33,10 @@ const BlogCardStyled = styled.div`
   ${TitleP} {
     padding: 8px 0;
   }
-  ${MainButton} {
-    color: ${colorTheme.colors.primary};
-  }
 `;
 const BlockInfo = styled.div`
   padding: 25px 35px 15px 25px;
 `;
-const ButtonLink = styled.a``;
+const ButtonLink = styled.a`
+  color: ${colorTheme.colors.primary};
+`;

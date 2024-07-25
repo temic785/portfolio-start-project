@@ -11,6 +11,7 @@ type FlexWrapper = {
   marg?: string;
   gap?: string;
   pad?: string;
+  maxHeight?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapper>`
@@ -27,4 +28,5 @@ export const FlexWrapper = styled.div<FlexWrapper>`
   margin: ${(props) => props.marg};
   gap: ${(props) => props.gap};
   padding: ${(props) => props.pad};
+  max-height: ${(props) => props.maxHeight};
 `;
