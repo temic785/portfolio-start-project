@@ -42,4 +42,6 @@ const StyledExtraSkills = styled.div`
   }
 `;
 
-const ExtraSkillsList = styled.ul``;
+const ExtraSkillsList = styled.ul`
+  padding-top: 15px;
+`;

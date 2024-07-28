@@ -4,6 +4,7 @@ import mainImage from "../../assets/images/mainPhoto.webp";
 import styled from "styled-components";
 import { colorTheme } from "../../styles/ThemeStyled";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import triangleSrc from "../../assets/triangle.svg";
 
 export const Header = () => {
   return (
@@ -36,9 +37,86 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-around;
   background-color: ${colorTheme.colors.white};
+  position: relative;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px ${colorTheme.colors.primary} solid;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 30px;
+    left: 40px;
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px #05ff00 solid;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 30px;
+    left: 88px;
+  }
+
+  ${FlexWrapper} {
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px #05ff00 solid;
+      border-radius: 50%;
+
+      position: absolute;
+      top: 52px;
+      left: 520px;
+    }
+
+    &::after {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border: 2px #0047ff solid;
+      transform: rotate(26deg);
+
+      position: absolute;
+      bottom: 112px;
+      left: 374px;
+    }
+  }
 `;
 
-const Greetings = styled.div``;
+const Greetings = styled.div`
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px ${colorTheme.colors.primary} solid;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 71px;
+    right: 396px;
+  }
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px ${colorTheme.colors.primary} solid;
+    transform: rotate(26deg);
+
+    position: absolute;
+    top: 70px;
+    right: 53px;
+  }
+`;
 
 const NameTitle = styled.h2`
   color: ${colorTheme.colors.secondary};
@@ -66,4 +144,17 @@ export const ButtonStyled = styled.button`
   background-color: ${colorTheme.colors.primary};
   font-weight: 500;
   border-radius: 5px;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url(${triangleSrc});
+    background-repeat: no-repeat;
+    cursor: default;
+
+    position: absolute;
+    bottom: 24px;
+    right: 33px;
+  }
 `;

@@ -30,4 +30,3 @@ export const Main = () => {
     </Container>
   );
 };
-const MainMenuWrapper = styled.div``;

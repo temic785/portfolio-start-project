@@ -28,6 +28,7 @@ const StyledNavigation = styled.div`
   min-height: 1315px;
   position: fixed;
   right: 0px;
+  z-index: 1;
 `;
 const ButtonImg = styled.button`
   height: 30px;

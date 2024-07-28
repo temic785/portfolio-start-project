@@ -28,13 +28,16 @@ export const Sidebar = () => {
     <StyledAside>
       <FlexWrapper direction="column" marg="0 45px 0 40px">
         <UserWrapper>
-          <StyledImage
-            src={sidebarImg}
-            width="150"
-            height="150"
-            alt="My phototo"
-            bord="50%"
-          />
+          <CircleWrapper>
+            <StyledImage
+              src={sidebarImg}
+              width="150"
+              height="150"
+              alt="My phototo"
+              bord="50%"
+            />
+          </CircleWrapper>
+
           <TitleBlock>Rayan Adlardard</TitleBlock>
           <SpanStyled>Font-end Developer</SpanStyled>
           <ListSocial menuItems={items} />
@@ -51,6 +54,8 @@ const StyledAside = styled.aside`
   background-color: ${colorTheme.colors.grey.light};
   height: 1315px;
   position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 const UserWrapper = styled.div`
@@ -61,8 +66,25 @@ const UserWrapper = styled.div`
   text-align: center;
   align-items: center;
   gap: 15px;
+
   ${StyledImage} {
     padding-bottom: 15px;
+  }
+`;
+
+const CircleWrapper = styled.div`
+  position: relative;
+
+  &::after {
+    content: "";
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: #7eb942;
+
+    position: absolute;
+    right: 10px;
+    bottom: 28px;
   }
 `;
 
