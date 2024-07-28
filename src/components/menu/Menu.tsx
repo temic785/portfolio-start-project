@@ -1,29 +1,55 @@
 import React from "react";
 import { Icon } from "../icon/icon";
 import styled from "styled-components";
+import { colorTheme } from "../../styles/ThemeStyled";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledMenuNav>
-      <ul>
+      <ListStyled>
         {props.menuItems.map((item, index) => {
           return (
-            <li key={index}>
-              <a href="#">
+            <ElStyled key={index}>
+              <LinkStyled href="#">
                 <Icon
                   iconId={item}
                   width={"17px"}
                   height={"18px"}
                   viewBox={"0 0 17px 18px"}
                 />
-              </a>
-            </li>
+              </LinkStyled>
+            </ElStyled>
           );
         })}
-      </ul>
+      </ListStyled>
     </StyledMenuNav>
   );
 };
 const StyledMenuNav = styled.nav`
-  margin-top: 254px;
+  padding: 225px 40px 0 40px;
+`;
+const ListStyled = styled.ul``;
+const ElStyled = styled.li`
+  padding-bottom: 65px;
+`;
+const LinkStyled = styled.a`
+  position: relative;
+  z-index: 0;
+  &:hover::before {
+    background-color: ${colorTheme.colors.primary};
+  }
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: ${colorTheme.colors.grey.medium};
+
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+  }
 `;
