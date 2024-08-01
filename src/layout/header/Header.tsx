@@ -2,7 +2,7 @@ import React from "react";
 import { StyledImage } from "../../components/StyledImage.styled";
 import mainImage from "../../assets/images/mainPhoto.webp";
 import styled from "styled-components";
-import { colorTheme } from "../../styles/ThemeStyled";
+import { myTheme } from "../../styles/ThemeStyled";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import triangleSrc from "../../assets/triangle.svg";
 
@@ -36,7 +36,7 @@ export const Header = () => {
 const StyledHeader = styled.header`
   display: flex;
   justify-content: space-around;
-  background-color: ${colorTheme.colors.white};
+  background-color: ${myTheme.colors.white};
   position: relative;
 
   &::before {
@@ -44,7 +44,7 @@ const StyledHeader = styled.header`
     display: inline-block;
     width: 16px;
     height: 16px;
-    border: 2px ${colorTheme.colors.primary} solid;
+    border: 2px ${myTheme.colors.primary} solid;
     border-radius: 50%;
 
     position: absolute;
@@ -98,7 +98,7 @@ const Greetings = styled.div`
     display: inline-block;
     width: 16px;
     height: 16px;
-    border: 2px ${colorTheme.colors.primary} solid;
+    border: 2px ${myTheme.colors.primary} solid;
     border-radius: 50%;
 
     position: absolute;
@@ -109,7 +109,7 @@ const Greetings = styled.div`
     content: "";
     width: 16px;
     height: 16px;
-    border: 2px ${colorTheme.colors.primary} solid;
+    border: 2px ${myTheme.colors.primary} solid;
     transform: rotate(26deg);
 
     position: absolute;
@@ -119,15 +119,15 @@ const Greetings = styled.div`
 `;
 
 const NameTitle = styled.h2`
-  color: ${colorTheme.colors.secondary};
+  color: ${myTheme.colors.secondary};
   font-size: 48px;
 `;
 
 const MainTitle = styled.h1`
-  color: ${colorTheme.colors.secondary};
+  color: ${myTheme.colors.secondary};
   font-size: 48px;
   span {
-    color: ${colorTheme.colors.primary};
+    color: ${myTheme.colors.primary};
   }
 `;
 const TextTitle = styled.p`
@@ -138,10 +138,10 @@ const TextTitle = styled.p`
 export const ButtonStyled = styled.button`
   max-width: 154px;
   min-height: 51px;
-  color: ${colorTheme.colors.secondary};
+  color: ${myTheme.colors.secondary};
   font-size: 16px;
   text-transform: uppercase;
-  background-color: ${colorTheme.colors.primary};
+  background-color: ${myTheme.colors.primary};
   font-weight: 500;
   border-radius: 5px;
 

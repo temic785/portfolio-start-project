@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/icon";
 import { TitleP } from "../../../../components/TitleP";
-import { colorTheme } from "../../../../styles/ThemeStyled";
+import { myTheme } from "../../../../styles/ThemeStyled";
 
 type ServicePropsType = {
   iconId: string;
@@ -17,7 +17,7 @@ export const Service = (props: ServicePropsType) => {
         height={"75px"}
         width={"75px"}
         viewBox={"0 0 70px 70px"}
-        color={colorTheme.colors.primary}
+        color={myTheme.colors.primary}
       />
       <ServiceTitle>{props.title}</ServiceTitle>
       <TitleP>{props.description}</TitleP>
@@ -26,7 +26,7 @@ export const Service = (props: ServicePropsType) => {
 };
 
 const StyledService = styled.div`
-  background-color: ${colorTheme.colors.grey.light};
+  background-color: ${myTheme.colors.grey.light};
   width: 310px;
   min-height: 225px;
   text-align: center;

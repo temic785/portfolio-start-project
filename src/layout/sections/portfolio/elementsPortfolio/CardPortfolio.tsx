@@ -2,7 +2,7 @@ import React from "react";
 import { StyledImage } from "../../../../components/StyledImage.styled";
 import mainImage from "../../../../assets/images/portfolio6.webp";
 import styled from "styled-components";
-import { colorTheme } from "../../../../styles/ThemeStyled";
+import { myTheme } from "../../../../styles/ThemeStyled";
 
 type CardPortfolioPropsType = {
   srcImg: string;
@@ -30,7 +30,7 @@ const CardPortfolioStyled = styled.div`
       right: 0;
       top: 0;
       bottom: 0;
-      background: ${colorTheme.colors.primary};
+      background: ${myTheme.colors.primary};
       opacity: 85%;
     }
     &:after {
@@ -39,7 +39,7 @@ const CardPortfolioStyled = styled.div`
       justify-content: center;
       align-items: center;
       font-size: 4rem;
-      color: ${colorTheme.colors.secondary};
+      color: ${myTheme.colors.secondary};
 
       position: absolute;
       left: 0;

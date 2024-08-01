@@ -2,7 +2,7 @@ import React from "react";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { TitleP } from "../../../components/TitleP";
 import styled from "styled-components";
-import { colorTheme } from "../../../styles/ThemeStyled";
+import { myTheme } from "../../../styles/ThemeStyled";
 import { SomeText } from "../../../components/SomeText";
 
 type EducationPlacePropsType = {
@@ -17,7 +17,7 @@ export const EducationPlace = (props: EducationPlacePropsType) => {
   return (
     <EducationPlaceStyled>
       <FlexWrapper
-        background={colorTheme.colors.grey.light}
+        background={myTheme.colors.grey.light}
         pad="45px 0 0 35px"
         gap="185px"
         justify="space-between"
@@ -46,7 +46,7 @@ const EducationPlaceStyled = styled.div`
       content: "";
       display: inline-block;
       height: 1.5px;
-      background-color: ${colorTheme.colors.grey.medium};
+      background-color: ${myTheme.colors.grey.medium};
 
       position: absolute;
       bottom: 0;
@@ -62,8 +62,8 @@ const ImportantName = styled.span`
 `;
 
 const DateEducationStyled = styled.span`
-  background-color: ${colorTheme.colors.primary};
-  color: ${colorTheme.colors.white};
+  background-color: ${myTheme.colors.primary};
+  color: ${myTheme.colors.white};
   font-size: 10px;
   padding: 4px 7px;
 `;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Icon } from "../../../components/icon/icon";
 import { TitleP } from "../../../components/TitleP";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import { colorTheme } from "../../../styles/ThemeStyled";
+import { myTheme } from "../../../styles/ThemeStyled";
 
 type ExtraSkillsItemPropsType = {
   iconId: string;

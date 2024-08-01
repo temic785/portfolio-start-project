@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { DescriptionSection } from "../../../components/DescriptionSection";
 import { TitleSection } from "../../../components/TitleSection";
 import { Koment } from "./koment/Koment";
-import { colorTheme } from "../../../styles/ThemeStyled";
+import { myTheme } from "../../../styles/ThemeStyled";
 
 import profile1 from "../../../assets/images/profile1.jpg";
 import profile2 from "../../../assets/images/profile2.jpg";

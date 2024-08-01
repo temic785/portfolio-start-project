@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Icon } from "../../components/icon/icon";
-import { colorTheme } from "../../styles/ThemeStyled";
+import { myTheme } from "../../styles/ThemeStyled";
 
 export const ListSocial = (props: { menuItems: Array<string> }) => {
   return (
@@ -45,7 +45,7 @@ const SocialLink = styled.a`
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: ${colorTheme.colors.primary};
+    background-color: ${myTheme.colors.primary};
 
     position: absolute;
     z-index: -1;

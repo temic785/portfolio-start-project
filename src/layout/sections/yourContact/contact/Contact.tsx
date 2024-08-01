@@ -8,7 +8,7 @@ export const Contact = () => {
   return (
     <ContactStyled>
       <TitleSection>Contact information</TitleSection>
-      <FlexWrapper direction="column" gap="18px">
+      <FlexWrapper direction="column" gap="18px" height="unset">
         <CardContact
           iconId="map"
           contInf1="Country:"

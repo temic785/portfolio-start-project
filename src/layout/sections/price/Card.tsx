@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colorTheme } from "../../../styles/ThemeStyled";
+import { myTheme } from "../../../styles/ThemeStyled";
 import { List } from "../../../components/List";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 
@@ -23,8 +23,8 @@ type PriceButtonProps = {
 export const Card = (props: CardPropsType) => {
   return (
     <StyledCard>
-      <Psevdo>{props.mostPop}</Psevdo>
       <FlexWrapper direction="column" align="center">
+        <Psevdo>{props.mostPop}</Psevdo>
         <TitleCard>{props.title}</TitleCard>
         <PriceCard>
           {props.price}
@@ -38,7 +38,9 @@ export const Card = (props: CardPropsType) => {
   );
 };
 
-const Psevdo = styled.div``;
+const Psevdo = styled.div`
+  width: 100%;
+`;
 
 const TitleCard = styled.h3`
   font-size: 24px;
@@ -46,7 +48,7 @@ const TitleCard = styled.h3`
 `;
 
 const StyledCard = styled.div`
-  background-color: ${colorTheme.colors.grey.light};
+  background-color: ${myTheme.colors.grey.light};
   text-align: center;
   padding-top: 54px;
   min-width: 310px;
@@ -55,8 +57,8 @@ const StyledCard = styled.div`
   }
 
   &:nth-child(2) ${Psevdo} {
-    background-color: ${colorTheme.colors.primary};
-    color: ${colorTheme.colors.secondary};
+    background-color: ${myTheme.colors.primary};
+    color: ${myTheme.colors.secondary};
     min-height: 30px;
     display: flex;
     justify-content: center;
@@ -72,7 +74,7 @@ const PriceCard = styled.span`
   font-size: 32px;
   font-weight: 700;
   /* padding: 19px 82px 8px 82px; */
-  color: ${colorTheme.colors.secondary};
+  color: ${myTheme.colors.secondary};
   span {
     font-size: 15px;
     font-weight: 400;
@@ -93,7 +95,7 @@ const PriceButton = styled.button<PriceButtonProps>`
 
   font-size: 14px;
   font-weight: 700;
-  color: ${colorTheme.colors.secondary};
+  color: ${myTheme.colors.secondary};
 
   border-radius: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Icon } from "../../../../components/icon/icon";
-import { colorTheme } from "../../../../styles/ThemeStyled";
+import { myTheme } from "../../../../styles/ThemeStyled";
 
 export const ListKoment = (props: { menuItems: Array<string> }) => {
   return (
@@ -14,7 +14,7 @@ export const ListKoment = (props: { menuItems: Array<string> }) => {
                 height={"18px"}
                 width={"18px"}
                 viewBox={"0 0 18px 18px"}
-                color={colorTheme.colors.primary}
+                color={myTheme.colors.primary}
               />
             </li>
           );

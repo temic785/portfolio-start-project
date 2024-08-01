@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon } from "../icon/icon";
 import styled from "styled-components";
-import { colorTheme } from "../../styles/ThemeStyled";
+import { myTheme } from "../../styles/ThemeStyled";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (
@@ -36,7 +36,7 @@ const LinkStyled = styled.a`
   position: relative;
   z-index: 0;
   &:hover::before {
-    background-color: ${colorTheme.colors.primary};
+    background-color: ${myTheme.colors.primary};
   }
   &::before {
     content: "";
@@ -44,7 +44,7 @@ const LinkStyled = styled.a`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: ${colorTheme.colors.grey.medium};
+    background-color: ${myTheme.colors.grey.medium};
 
     position: absolute;
     z-index: -1;

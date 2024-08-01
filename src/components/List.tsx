@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Icon } from "./icon/icon";
 import { FlexWrapper } from "./FlexWrapper";
-import { colorTheme } from "../styles/ThemeStyled";
+import { myTheme } from "../styles/ThemeStyled";
 
 type Test = {
   icon: string;
@@ -50,5 +50,5 @@ const StyledLi = styled.li`
 `;
 const ServiceName = styled.span<{ hasIcon: string }>`
   color: ${(props) =>
-    props.hasIcon === "check" ? colorTheme.colors.secondary : ""};
+    props.hasIcon === "check" ? myTheme.colors.secondary : ""};
 `;

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { colorTheme } from "./ThemeStyled";
+import { myTheme } from "./ThemeStyled";
 
 export const GlobalStyles = createGlobalStyle`
     *,
@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 
     }
     body{
-        background-color:${colorTheme.colors.grey.medium};
+        background-color:${myTheme.colors.grey.medium};
         margin: 0;
         font-family: 'Inter',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    color:${colorTheme.colors.grey.dark};
+    color:${myTheme.colors.grey.dark};
     line-height: 1.2;
     text-transform: capitalize;
     }
@@ -52,15 +52,15 @@ export const GlobalStyles = createGlobalStyle`
     p{
         font-size: 15px;
         font-weight: 400;
-        color:${colorTheme.colors.grey.dark}
+        color:${myTheme.colors.grey.dark}
     }
 
     span{
-        color:${colorTheme.colors.secondary}
+        color:${myTheme.colors.secondary}
     }
     
     h3{
-        color:${colorTheme.colors.secondary};
+        color:${myTheme.colors.secondary};
         font-size:18px;
         font-weight:500;
     }

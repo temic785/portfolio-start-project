@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colorTheme } from "../../styles/ThemeStyled";
+import { myTheme } from "../../styles/ThemeStyled";
 import { Menu } from "./Menu";
 import { Icon } from "../icon/icon";
 
@@ -23,7 +23,7 @@ export const Navigation = () => {
 };
 
 const StyledNavigation = styled.div`
-  background-color: ${colorTheme.colors.grey.light};
+  background-color: ${myTheme.colors.grey.light};
   min-width: 108px;
   min-height: 1315px;
   position: fixed;

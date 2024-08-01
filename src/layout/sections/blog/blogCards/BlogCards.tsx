@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BlogCard } from "./BlogCard";
-import { colorTheme } from "../../../../styles/ThemeStyled";
+import { myTheme } from "../../../../styles/ThemeStyled";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
 
 import cardPort1 from "../../../../assets/images/portfolio1.webp";

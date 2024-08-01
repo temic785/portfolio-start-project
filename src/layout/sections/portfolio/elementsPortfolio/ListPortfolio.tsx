@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colorTheme } from "../../../../styles/ThemeStyled";
+import { myTheme } from "../../../../styles/ThemeStyled";
 
 export const ListPortfolio = (props: { listItems: Array<string> }) => {
   return (
@@ -19,12 +19,12 @@ const ListPortfolioStyled = styled.ul`
   padding-bottom: 50px;
 `;
 const LiElStyled = styled.li`
-  color: ${colorTheme.colors.secondary};
+  color: ${myTheme.colors.secondary};
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
 
   &:hover {
-    color: ${colorTheme.colors.primary};
+    color: ${myTheme.colors.primary};
   }
 `;

@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Icon } from "../../../components/icon/icon";
 import { TitleSection } from "../../../components/TitleSection";
 import { Service } from "./service/Service";
-import { colorTheme } from "../../../styles/ThemeStyled";
+import { myTheme } from "../../../styles/ThemeStyled";
 import { DescriptionSection } from "../../../components/DescriptionSection";
 
 export const Services = () => {
@@ -52,7 +52,7 @@ export const Services = () => {
   );
 };
 const StyledServices = styled.section`
-  background-color: ${colorTheme.colors.grey.medium};
+  background-color: ${myTheme.colors.grey.medium};
   padding: 140px 0 0 0;
   border: 1px solid black;
 `;

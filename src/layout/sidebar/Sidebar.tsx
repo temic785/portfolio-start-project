@@ -1,7 +1,7 @@
 import React from "react";
 import sidebarImg from "../../assets/images/profile.webp";
 import styled from "styled-components";
-import { colorTheme } from "../../styles/ThemeStyled";
+import { myTheme } from "../../styles/ThemeStyled";
 import { StyledImage } from "../../components/StyledImage.styled";
 import { TitleP } from "../../components/TitleP";
 import { FlexWrapper } from "../../components/FlexWrapper";
@@ -51,7 +51,7 @@ export const Sidebar = () => {
   );
 };
 const StyledAside = styled.aside`
-  background-color: ${colorTheme.colors.grey.light};
+  background-color: ${myTheme.colors.grey.light};
   height: 1315px;
   position: absolute;
   top: 0;
@@ -90,7 +90,7 @@ const CircleWrapper = styled.div`
 
 const StyledButtonCV = styled.button`
   position: relative;
-  background-color: ${colorTheme.colors.primary};
+  background-color: ${myTheme.colors.primary};
   min-height: 40px;
   font-size: 14px;
   font-weight: 600;
@@ -100,7 +100,7 @@ const StyledButtonCV = styled.button`
     content: "";
     display: inline-block;
     height: 1.5px;
-    background-color: ${colorTheme.colors.grey.medium};
+    background-color: ${myTheme.colors.grey.medium};
 
     position: absolute;
     top: -25px;

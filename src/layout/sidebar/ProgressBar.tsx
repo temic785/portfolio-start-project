@@ -2,7 +2,7 @@ import React from "react";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { SpanStyled } from "../../components/SpanStyled";
 import styled from "styled-components";
-import { colorTheme } from "../../styles/ThemeStyled";
+import { myTheme } from "../../styles/ThemeStyled";
 
 type ProgressBarType = {
   langName: string;
@@ -30,7 +30,7 @@ const ProgressBarLine = styled.div<{ percent: string }>`
 
   height: 6px;
   border-radius: 30px;
-  border: 0.5px ${colorTheme.colors.primary} solid;
+  border: 0.5px ${myTheme.colors.primary} solid;
   position: relative;
 
   &::before {
@@ -39,7 +39,7 @@ const ProgressBarLine = styled.div<{ percent: string }>`
     height: 2px;
     border-radius: 30px;
     width: ${(props) => props.percent};
-    background-color: ${colorTheme.colors.primary};
+    background-color: ${myTheme.colors.primary};
 
     position: absolute;
     top: 1px;

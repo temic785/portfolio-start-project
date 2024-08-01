@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { TitleP } from "../../../../components/TitleP";
 import { Icon } from "../../../../components/icon/icon";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
-import { colorTheme } from "../../../../styles/ThemeStyled";
+import { myTheme } from "../../../../styles/ThemeStyled";
 import { TitleNameForm } from "../yourInfo/StyledForms";
 
 type CardContactPropsType = {
@@ -59,7 +59,7 @@ const Couple = styled.div`
 `;
 
 const CardContactStyled = styled.div`
-  background-color: ${colorTheme.colors.white};
+  background-color: ${myTheme.colors.white};
   padding: 25px 25px 15px 25px;
   min-height: 210px;
 
@@ -80,7 +80,7 @@ const IconWrapper = styled.div`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: ${colorTheme.colors.primary};
+    background-color: ${myTheme.colors.primary};
 
     position: absolute;
     z-index: -1;

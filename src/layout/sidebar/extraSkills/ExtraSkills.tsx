@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { ExtraSkillsItem } from "./ExtraSkillsItem";
 import { TitleSection } from "../../../components/TitleSection";
-import { colorTheme } from "../../../styles/ThemeStyled";
+import { myTheme } from "../../../styles/ThemeStyled";
 
 export const ExtraSkills = () => {
   return (
@@ -27,7 +27,7 @@ const StyledExtraSkills = styled.div`
     content: "";
     display: inline-block;
     height: 1.5px;
-    background-color: ${colorTheme.colors.grey.medium};
+    background-color: ${myTheme.colors.grey.medium};
 
     position: absolute;
     top: 25px;

@@ -1,7 +1,7 @@
 import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { TitleP } from "../../../../components/TitleP";
 import { TitleSection } from "../../../../components/TitleSection";
-import { colorTheme } from "../../../../styles/ThemeStyled";
+import { myTheme } from "../../../../styles/ThemeStyled";
 import styled from "styled-components";
 
 export const StyledForms = () => {
@@ -30,7 +30,7 @@ const StyledForm = styled.form`
   }
 
   ${FlexWrapper} {
-    background-color: ${colorTheme.colors.white};
+    background-color: ${myTheme.colors.white};
     padding: 25px;
     max-width: 570px;
   }
@@ -41,11 +41,11 @@ const StyledForm = styled.form`
 export const TitleNameForm = styled.span`
   font-size: 18px;
   font-weight: 500;
-  color: ${colorTheme.colors.grey.dark};
+  color: ${myTheme.colors.grey.dark};
 `;
 
 const Field = styled.input`
-  background-color: ${colorTheme.colors.grey.medium};
+  background-color: ${myTheme.colors.grey.medium};
   min-height: 50px;
   margin: 8px 0 25px;
 
@@ -54,7 +54,7 @@ const Field = styled.input`
   }
 `;
 export const StyledButton = styled.button`
-  background-color: ${colorTheme.colors.primary};
+  background-color: ${myTheme.colors.primary};
   max-width: 160px;
   min-height: 35px;
   font-weight: 600;

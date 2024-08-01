@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { TitleSection } from "../../components/TitleSection";
-import { colorTheme } from "../../styles/ThemeStyled";
+import { myTheme } from "../../styles/ThemeStyled";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { SpanStyled } from "../../components/SpanStyled";
 import { ProgressBar } from "./ProgressBar";
@@ -40,7 +40,7 @@ const LineBlock = styled.div`
     content: "";
     display: inline-block;
     height: 1.5px;
-    background-color: ${colorTheme.colors.grey.medium};
+    background-color: ${myTheme.colors.grey.medium};
 
     position: absolute;
     top: 25px;

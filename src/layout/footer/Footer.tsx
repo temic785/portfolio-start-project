@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { colorTheme } from "../../styles/ThemeStyled";
+import { myTheme } from "../../styles/ThemeStyled";
 
 export const Footer = () => {
   return (
@@ -11,14 +11,14 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: ${colorTheme.colors.white};
+  background-color: ${myTheme.colors.white};
   min-height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 const StyledSmall = styled.small`
-  color: ${colorTheme.colors.secondary};
+  color: ${myTheme.colors.secondary};
   font-size: 15px;
   font-weight: 400;
   text-transform: capitalize;

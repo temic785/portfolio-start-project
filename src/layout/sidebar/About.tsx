@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { colorTheme } from "../../styles/ThemeStyled";
+import { myTheme } from "../../styles/ThemeStyled";
 import { SpanStyled } from "../../components/SpanStyled";
 
 export const About = () => {
@@ -35,7 +35,7 @@ const StyledAbout = styled.div`
     content: "";
     display: inline-block;
     height: 1.5px;
-    background-color: ${colorTheme.colors.grey.medium};
+    background-color: ${myTheme.colors.grey.medium};
 
     position: absolute;
     top: 25px;
@@ -44,10 +44,10 @@ const StyledAbout = styled.div`
   }
 
   ${SpanStyled} {
-    color: ${colorTheme.colors.secondary};
+    color: ${myTheme.colors.secondary};
     padding: 0 5px;
     :nth-child(odd) {
-      background-color: ${colorTheme.colors.primary};
+      background-color: ${myTheme.colors.primary};
       line-height: 1.7em;
     }
   }

@@ -3,7 +3,7 @@ import { TitleSection } from "../../../components/TitleSection";
 import { DescriptionSection } from "../../../components/DescriptionSection";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Card } from "./Card";
-import { colorTheme } from "../../../styles/ThemeStyled";
+import { myTheme } from "../../../styles/ThemeStyled";
 
 const cardItems = [
   { icon: "check", span: "UI Design" },
@@ -59,7 +59,7 @@ optimize web queries"
             price="50.00"
             description="For most businesses that want to
 optimize web queries"
-            myBtnType={colorTheme.colors.primary}
+            myBtnType={myTheme.colors.primary}
             menuCardItems={cardItems2}
             mostPop="Most Popular"
           />

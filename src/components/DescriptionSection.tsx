@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { colorTheme } from "../styles/ThemeStyled";
+import { myTheme } from "../styles/ThemeStyled";
 
 export const DescriptionSection = styled.p`
   font-size: 15px;
-  color: ${colorTheme.colors.grey.dark};
+  color: ${myTheme.colors.grey.dark};
   display: flex;
   text-align: center;
   margin: 30px auto 50px;
