@@ -52,10 +52,13 @@ export const Sidebar = () => {
 };
 const StyledAside = styled.aside`
   background-color: ${myTheme.colors.grey.light};
-  height: 1315px;
   position: absolute;
   top: 0;
   left: 0;
+
+  @media ${myTheme.media.tablet} {
+    display: none;
+  }
 `;
 
 const UserWrapper = styled.div`
@@ -95,6 +98,7 @@ const StyledButtonCV = styled.button`
   font-size: 14px;
   font-weight: 600;
   z-index: 0;
+  margin-bottom: 25px;
 
   &::before {
     content: "";

@@ -46,7 +46,7 @@ export const PricePlans = () => {
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
         </DescriptionSection>
-        <FlexWrapper justify="space-between" width="100%">
+        <FlexWrapper justify="space-between" width="100%" wrap="wrap">
           <Card
             title="Silver"
             price="0.00"

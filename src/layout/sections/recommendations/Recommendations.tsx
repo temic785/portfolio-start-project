@@ -18,7 +18,7 @@ export const Recommendations = () => {
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
         </DescriptionSection>
-        <FlexWrapper justify="space-between" width="100%">
+        <FlexWrapper justify="space-between" width="100%" wrap="wrap">
           <Koment
             title="Great Quality!"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet...."

@@ -29,7 +29,12 @@ const StyledNavigation = styled.div`
   position: fixed;
   right: 0px;
   z-index: 1;
+
+  @media ${myTheme.media.tablet} {
+    display: none;
+  }
 `;
+
 const ButtonImg = styled.button`
   height: 30px;
   margin: 50px 40px 0 40px;

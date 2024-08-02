@@ -18,7 +18,7 @@ export const Header = () => {
         <Greetings>
           <NameTitle>I’m Rayan Adlrdard</NameTitle>
           <MainTitle>
-            <span>Front-end</span> Developer{" "}
+            <span>Front-end</span> Developer
           </MainTitle>
         </Greetings>
         <TextTitle>
@@ -28,7 +28,7 @@ export const Header = () => {
         </TextTitle>
         <ButtonStyled>Hire me &#8594;</ButtonStyled>
       </FlexWrapper>
-      <StyledImage src={mainImage} width="325" height="460"></StyledImage>
+      <StyledImage src={mainImage} width="325px" height="457px"></StyledImage>
     </StyledHeader>
   );
 };
@@ -38,6 +38,7 @@ const StyledHeader = styled.header`
   justify-content: space-around;
   background-color: ${myTheme.colors.white};
   position: relative;
+  flex-wrap: wrap;
 
   &::before {
     content: "";
