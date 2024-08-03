@@ -52,6 +52,7 @@ const StyledCard = styled.div`
   text-align: center;
   padding-top: 54px;
   min-width: 310px;
+  flex-grow: 1;
   &:nth-child(2) {
     padding: 0;
   }

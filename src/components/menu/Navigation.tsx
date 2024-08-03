@@ -33,6 +33,9 @@ const StyledNavigation = styled.div`
   @media ${myTheme.media.tablet} {
     display: none;
   }
+  @media ${myTheme.media.desktop.nav} {
+    display: none;
+  }
 `;
 
 const ButtonImg = styled.button`

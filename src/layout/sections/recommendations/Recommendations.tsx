@@ -18,7 +18,12 @@ export const Recommendations = () => {
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
         </DescriptionSection>
-        <FlexWrapper justify="space-between" width="100%" wrap="wrap">
+        <FlexWrapper
+          justify="space-between"
+          width="100%"
+          wrap="wrap"
+          gap="27px"
+        >
           <Koment
             title="Great Quality!"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. Morbi donec amet...."
@@ -41,9 +46,26 @@ export const Recommendations = () => {
             profImg={profile3}
           />
         </FlexWrapper>
+        <Pagination>
+          <span></span>
+          <span></span>
+          <span></span>
+        </Pagination>
       </FlexWrapper>
     </RecommendationsStyled>
   );
 };
 
 const RecommendationsStyled = styled.section``;
+const Pagination = styled.div`
+  display: flex;
+  margin-top: 50px;
+  gap: 10px;
+  span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: ${myTheme.colors.primary};
+    border-radius: 100%;
+  }
+`;

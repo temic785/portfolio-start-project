@@ -15,7 +15,7 @@ export const Services = () => {
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
         </DescriptionSection>
-        <FlexWrapper wrap="wrap" justify="space-between">
+        <FlexWrapper wrap="wrap" justify="space-between" gap="20px">
           <Service
             iconId="codding"
             title="web development"
@@ -54,5 +54,7 @@ export const Services = () => {
 const StyledServices = styled.section`
   background-color: ${myTheme.colors.grey.medium};
   padding: 140px 0 0 0;
-  border: 1px solid black;
+  @media ${myTheme.media.mobile} {
+    padding-top: 85px;
+  }
 `;

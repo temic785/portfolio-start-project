@@ -40,6 +40,12 @@ const StyledHeader = styled.header`
   position: relative;
   flex-wrap: wrap;
 
+  @media ${myTheme.media.mobile} {
+    & > *:not(:last-child) {
+      padding: 0 32px;
+    }
+  }
+
   &::before {
     content: "";
     display: inline-block;
@@ -51,6 +57,10 @@ const StyledHeader = styled.header`
     position: absolute;
     top: 30px;
     left: 40px;
+
+    @media ${myTheme.media.mobile} {
+      display: none;
+    }
   }
   &::after {
     content: "";
@@ -63,9 +73,17 @@ const StyledHeader = styled.header`
     position: absolute;
     bottom: 30px;
     left: 88px;
+
+    @media ${myTheme.media.mobile} {
+      display: none;
+    }
   }
 
   ${FlexWrapper} {
+    @media ${myTheme.media.mobile} {
+      height: 100%;
+    }
+
     &::before {
       content: "";
       display: inline-block;
@@ -77,6 +95,10 @@ const StyledHeader = styled.header`
       position: absolute;
       top: 52px;
       left: 520px;
+      @media ${myTheme.media.mobile} {
+        top: 52px;
+        left: 180px;
+      }
     }
 
     &::after {
@@ -89,6 +111,21 @@ const StyledHeader = styled.header`
       position: absolute;
       bottom: 112px;
       left: 374px;
+
+      @media ${myTheme.media.mobile} {
+        bottom: 755px;
+        left: 60px;
+      }
+    }
+  }
+
+  ${StyledImage} {
+    @media ${myTheme.media.mobile} {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: cover;
     }
   }
 `;
@@ -105,6 +142,9 @@ const Greetings = styled.div`
     position: absolute;
     bottom: 71px;
     right: 396px;
+    @media ${myTheme.media.mobile} {
+      display: none;
+    }
   }
   &::after {
     content: "";
@@ -135,6 +175,10 @@ const TextTitle = styled.p`
   max-width: 424px;
   font-size: 16;
   font-weight: 400px;
+  line-height: 1.3;
+  @media ${myTheme.media.mobile} {
+    padding: 90px 0 35px 0;
+  }
 `;
 export const ButtonStyled = styled.button`
   max-width: 154px;
@@ -157,5 +201,8 @@ export const ButtonStyled = styled.button`
     position: absolute;
     bottom: 24px;
     right: 33px;
+    @media ${myTheme.media.mobile} {
+      display: none;
+    }
   }
 `;

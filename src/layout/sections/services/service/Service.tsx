@@ -37,6 +37,12 @@ const StyledService = styled.div`
   justify-content: center;
   align-items: center;
 
+  flex-grow: 1;
+
+  @media ${myTheme.media.mobile} {
+    max-width: 310px;
+    margin: 0 auto;
+  }
   &:nth-last-child(-n + 3) {
     margin-bottom: 0;
   }

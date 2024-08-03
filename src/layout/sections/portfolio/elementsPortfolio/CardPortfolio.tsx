@@ -11,16 +11,25 @@ type CardPortfolioPropsType = {
 export const CardPortfolio = (props: CardPortfolioPropsType) => {
   return (
     <CardPortfolioStyled>
-      <StyledImage src={props.srcImg} width="310" height="300"></StyledImage>
+      <StyledImage src={props.srcImg} width="100%" height="300px"></StyledImage>
     </CardPortfolioStyled>
   );
 };
 const CardPortfolioStyled = styled.div`
+  width: 310px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex-grow: 1;
   cursor: pointer;
   position: relative;
+
+  ${StyledImage} {
+    @media ${myTheme.media.mobile} {
+      width: 310px;
+      margin: 0 auto;
+    }
+  }
 
   &:hover {
     &::before {

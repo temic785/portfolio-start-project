@@ -17,33 +17,37 @@ type CardPropsType = {
 export const Koment = (props: CardPropsType) => {
   return (
     <KomenStyled>
-      <FlexWrapper
-        direction="column"
-        background={myTheme.colors.grey.light}
-        pad="25px 20px 25px 25px "
-      >
-        <ListKoment menuItems={starArr} />
-        <ShortReview>{props.title}</ShortReview>
-        <ComentPar>{props.description}</ComentPar>
-        <FlexWrapper gap="13px">
-          <StyledImage
-            src={props.profImg}
-            width="80px"
-            height="80px"
-            alt="My phototo"
-            bord="50%"
-          />
-          <FlexWrapper direction="column" justify="center" align="center">
-            <CommnetatorName>{props.nameProfile}</CommnetatorName>
-            <DescriptionSection>{props.professionProfile}</DescriptionSection>
-          </FlexWrapper>
+      <ListKoment menuItems={starArr} />
+      <ShortReview>{props.title}</ShortReview>
+      <ComentPar>{props.description}</ComentPar>
+      <FlexWrapper gap="13px">
+        <StyledImage
+          src={props.profImg}
+          width="80px"
+          height="80px"
+          alt="My phototo"
+          bord="50%"
+        />
+        <FlexWrapper direction="column" justify="center" align="center">
+          <CommnetatorName>{props.nameProfile}</CommnetatorName>
+          <DescriptionSection>{props.professionProfile}</DescriptionSection>
         </FlexWrapper>
       </FlexWrapper>
     </KomenStyled>
   );
 };
 const KomenStyled = styled.div`
-  /* width: 33%; */
+  max-width: 310px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: ${myTheme.colors.grey.light};
+  padding: 25px 20px 25px 25px;
+  flex-grow: 1;
+  margin: 0 auto;
+
+  @media ${myTheme.media.desktop} {
+  }
 `;
 
 const CommnetatorName = styled.div`

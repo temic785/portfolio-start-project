@@ -46,19 +46,22 @@ export const PricePlans = () => {
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
         </DescriptionSection>
-        <FlexWrapper justify="space-between" width="100%" wrap="wrap">
+        <FlexWrapper
+          justify="space-between"
+          width="100%"
+          wrap="wrap"
+          gap="20px"
+        >
           <Card
             title="Silver"
             price="0.00"
-            description="For most businesses that want to
-optimize web queries"
+            description="For most businesses that want to optimize web queries"
             menuCardItems={cardItems}
           />
           <Card
             title="Gold"
             price="50.00"
-            description="For most businesses that want to
-optimize web queries"
+            description="For most businesses that want to optimize web queries"
             myBtnType={myTheme.colors.primary}
             menuCardItems={cardItems2}
             mostPop="Most Popular"
@@ -66,8 +69,7 @@ optimize web queries"
           <Card
             title="Dimond"
             price="80.00"
-            description="For most businesses that want to
-optimize web queries"
+            description="For most businesses that want to optimize web queries"
             menuCardItems={cardItems3}
           />
         </FlexWrapper>

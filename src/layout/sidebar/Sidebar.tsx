@@ -55,7 +55,9 @@ const StyledAside = styled.aside`
   position: absolute;
   top: 0;
   left: 0;
-
+  @media ${myTheme.media.desktop.aside} {
+    display: none;
+  }
   @media ${myTheme.media.tablet} {
     display: none;
   }

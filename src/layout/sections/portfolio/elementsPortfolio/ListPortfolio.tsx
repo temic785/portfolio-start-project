@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { myTheme } from "../../../../styles/ThemeStyled";
+import { font } from "../../../../styles/Common";
 
 export const ListPortfolio = (props: { listItems: Array<string> }) => {
   return (
@@ -14,9 +15,10 @@ export const ListPortfolio = (props: { listItems: Array<string> }) => {
 
 const ListPortfolioStyled = styled.ul`
   display: flex;
-  justify-content: center;
-  gap: 37px;
-  padding-bottom: 50px;
+  justify-content: space-between;
+  max-width: 605px;
+  width: 100%;
+  margin: 0 auto 40px;
 `;
 const LiElStyled = styled.li`
   color: ${myTheme.colors.secondary};
@@ -26,5 +28,9 @@ const LiElStyled = styled.li`
 
   &:hover {
     color: ${myTheme.colors.primary};
+  }
+  @media ${myTheme.media.tablet} {
+    font-size: 12px;
+    ${font({ weight: 500, Fmax: 18, Fmin: 12 })}
   }
 `;
