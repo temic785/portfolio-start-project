@@ -5,16 +5,28 @@ import styled from "styled-components";
 import { myTheme } from "../../styles/ThemeStyled";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import triangleSrc from "../../assets/triangle.svg";
+import Typewriter from "typewriter-effect";
+import Tilt from "react-parallax-tilt";
 
 export const Header = () => {
   return (
-    <StyledHeader>
+    <StyledHeader id="home">
       <FlexWrapper direction="column" justify="space-between">
         <Greetings>
           <NameTitle>I’m Rayan Adlrdard</NameTitle>
           <MainTitle>
             <span>Front-end</span> Developer
           </MainTitle>
+          {/* <MainTitle>
+            <p>Front-end Developer</p>
+            <Typewriter
+              options={{
+                strings: ['<span class="highlight">Front-end</span> Developer'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </MainTitle> */}
         </Greetings>
         <TextTitle>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat
@@ -23,7 +35,9 @@ export const Header = () => {
         </TextTitle>
         <ButtonStyled>Hire me &#8594;</ButtonStyled>
       </FlexWrapper>
-      <StyledImage src={mainImage} width="325px" height="457px"></StyledImage>
+      <Tilt>
+        <StyledImage src={mainImage} width="325px" height="457px"></StyledImage>
+      </Tilt>
     </StyledHeader>
   );
 };
@@ -189,6 +203,12 @@ const NameTitle = styled.h2`
 const MainTitle = styled.h1`
   color: ${myTheme.colors.secondary};
   font-size: 48px;
+  .highlight {
+    color: ${myTheme.colors.primary};
+  }
+  p {
+    display: none;
+  }
   span {
     color: ${myTheme.colors.primary};
   }

@@ -37,7 +37,7 @@ const items = [
 
 export const Blog = () => {
   return (
-    <BlogStyled>
+    <BlogStyled id="blog">
       <TitleSection>Blog</TitleSection>
       <DescriptionSection>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet

@@ -2,16 +2,54 @@ import React from "react";
 import { Icon } from "../icon/icon";
 import styled from "styled-components";
 import { myTheme } from "../../styles/ThemeStyled";
+import { Link } from "react-scroll";
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+const items = [
+  {
+    icon: "moon",
+    href: "",
+  },
+  {
+    icon: "home",
+    href: "home",
+  },
+  {
+    icon: "services",
+    href: "services",
+  },
+  {
+    icon: "education",
+    href: "education",
+  },
+  {
+    icon: "portfolio",
+    href: "portfolio",
+  },
+  {
+    icon: "blog",
+    href: "blog",
+  },
+  {
+    icon: "contact",
+    href: "contact",
+  },
+];
+
+export const Menu = () => {
   return (
     <StyledMenuNav>
       <ListStyled>
-        {props.menuItems.map((item, index) => (
+        {items.map((item, index) => (
           <ElStyled key={index} isFirst={index === 0}>
-            <LinkStyled href="#" iconId={item}>
+            <LinkStyled
+              to={item.href}
+              smooth={true}
+              activeClass="active"
+              spy={true}
+              iconId={item.icon}
+            >
               <Icon
-                iconId={item}
+                iconId={item.icon}
                 width={"17px"}
                 height={"18px"}
                 viewBox={"0 0 17px 18px"}
@@ -54,8 +92,6 @@ const ElStyled = styled.li<{ isFirst: boolean }>`
   justify-content: center;
   align-items: center;
   &:first-of-type {
-    /* margin: 0 auto; */
-
     margin-bottom: 107px;
     @media ${myTheme.media.desktop.nav} {
       margin-bottom: 0;
@@ -74,7 +110,7 @@ const ElStyled = styled.li<{ isFirst: boolean }>`
   }
 `;
 
-const LinkStyled = styled.a<{ iconId: string }>`
+const LinkStyled = styled(Link)<{ iconId: string }>`
   width: 40px;
   height: 40px;
   display: flex;
@@ -83,7 +119,8 @@ const LinkStyled = styled.a<{ iconId: string }>`
   border-radius: 50%;
   background-color: ${myTheme.colors.grey.medium};
 
-  &:hover {
+  &:hover,
+  &.active {
     background-color: ${myTheme.colors.primary};
   }
 
@@ -97,3 +134,27 @@ const LinkStyled = styled.a<{ iconId: string }>`
       `}
   }
 `;
+
+// const LinkStyled = styled.a<{ iconId: string }>`
+//   width: 40px;
+//   height: 40px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 50%;
+//   background-color: ${myTheme.colors.grey.medium};
+
+//   &:hover {
+//     background-color: ${myTheme.colors.primary};
+//   }
+
+//   svg {
+//     ${(props) =>
+//       props.iconId === "moon" &&
+//       `
+//       width: 25px;
+//       height: 25px;
+
+//       `}
+//   }
+// `;

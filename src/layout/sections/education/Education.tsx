@@ -7,7 +7,7 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 
 export const Education = () => {
   return (
-    <EducationStyled>
+    <EducationStyled id="education">
       <FlexWrapper direction="column">
         <TitleSection>Education</TitleSection>
         <DescriptionSection>

@@ -8,7 +8,7 @@ import { Contact } from "../contact/Contact";
 
 export const YourInfo = () => {
   return (
-    <YourInfoStyled>
+    <YourInfoStyled id="contact">
       <StyledForms />
       <Contact />
     </YourInfoStyled>

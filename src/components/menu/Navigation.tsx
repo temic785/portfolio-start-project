@@ -4,20 +4,10 @@ import { myTheme } from "../../styles/ThemeStyled";
 import { Menu } from "./Menu";
 import { Icon } from "../icon/icon";
 
-const items = [
-  "moon",
-  "home",
-  "services",
-  "education",
-  "portfolio",
-  "blog",
-  "contact",
-];
-
 export const Navigation = () => {
   return (
     <StyledNavigation>
-      <Menu menuItems={items} />
+      <Menu />
     </StyledNavigation>
   );
 };

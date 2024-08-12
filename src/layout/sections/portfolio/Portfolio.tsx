@@ -81,7 +81,7 @@ export const Portfolio: React.FC = () => {
     setCurrentFilterStatus(value);
   }
   return (
-    <PortfolioStyled>
+    <PortfolioStyled id="portfolio">
       <TitleSection>Portfolio</TitleSection>
       <DescriptionSection>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet

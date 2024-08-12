@@ -109,7 +109,6 @@ export const PricePlans = () => {
         </FlexWrapper>
         <StyledCarouselContainer>
           <AliceCarousel
-            mouseTracking
             items={items}
             responsive={responsive}
             controlsStrategy="alternate"

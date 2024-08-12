@@ -8,7 +8,7 @@ import { DescriptionSection } from "../../../components/DescriptionSection";
 
 export const Services = () => {
   return (
-    <StyledServices>
+    <StyledServices id="services">
       <FlexWrapper direction="column" align="center">
         <TitleSection>My Services</TitleSection>
         <DescriptionSection>

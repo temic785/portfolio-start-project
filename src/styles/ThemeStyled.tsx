@@ -16,6 +16,7 @@ export const myTheme = {
       aside: "screen and (max-width: 1000px)",
       nav: "screen and (max-width: 1000px)",
       desktop: "screen and (max-width: 1000px)",
+      toDesktop: "screen and (min-width: 1000px)",
     },
     slider: "screen and (max-width: 1399px)",
   },
