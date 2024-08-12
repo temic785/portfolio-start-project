@@ -17,15 +17,15 @@ export const CardsPortfolio = () => {
   return (
     <CardsPortfolioStyled>
       <FlexWrapper wrap="wrap" gap="20px">
-        <CardPortfolio srcImg={cardPort1} />
-        <CardPortfolio srcImg={cardPort2} />
-        <CardPortfolio srcImg={cardPort3} />
-        <CardPortfolio srcImg={cardPort4} />
-        <CardPortfolio srcImg={cardPort5} />
-        <CardPortfolio srcImg={cardPort6} />
-        <CardPortfolio srcImg={cardPort7} />
-        <CardPortfolio srcImg={cardPort8} />
-        <CardPortfolio srcImg={cardPort9} />
+        {/* <CardPortfolio type="ui" srcImg={cardPort1} />
+        <CardPortfolio type="ui" srcImg={cardPort2} />
+        <CardPortfolio type="ui" srcImg={cardPort3} />
+        <CardPortfolio type="web" srcImg={cardPort4} />
+        <CardPortfolio type="web" srcImg={cardPort5} />
+        <CardPortfolio type="web" srcImg={cardPort6} />
+        <CardPortfolio type="logo" srcImg={cardPort7} />
+        <CardPortfolio type="branding" srcImg={cardPort8} />
+        <CardPortfolio type="logo" srcImg={cardPort9} /> */}
       </FlexWrapper>
     </CardsPortfolioStyled>
   );

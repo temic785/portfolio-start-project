@@ -58,6 +58,7 @@ const StyledCard = styled.div`
   }
 
   &:nth-child(2) ${Psevdo} {
+    display: inline-block;
     background-color: ${myTheme.colors.primary};
     color: ${myTheme.colors.secondary};
     min-height: 30px;
@@ -69,12 +70,17 @@ const StyledCard = styled.div`
   &:nth-child(2) ${TitleCard} {
     padding-top: 25px;
   }
+  @media ${myTheme.media.slider} {
+    flex-grow: 1;
+    margin: 0 auto;
+    max-width: 310px;
+    height: 610px;
+  }
 `;
 
 const PriceCard = styled.span`
   font-size: 32px;
   font-weight: 700;
-  /* padding: 19px 82px 8px 82px; */
   color: ${myTheme.colors.secondary};
   span {
     font-size: 15px;

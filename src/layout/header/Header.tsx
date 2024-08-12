@@ -9,12 +9,7 @@ import triangleSrc from "../../assets/triangle.svg";
 export const Header = () => {
   return (
     <StyledHeader>
-      <FlexWrapper
-        direction="column"
-        justify="space-between"
-        marg="93px 0 0 0"
-        height="300px"
-      >
+      <FlexWrapper direction="column" justify="space-between">
         <Greetings>
           <NameTitle>I’m Rayan Adlrdard</NameTitle>
           <MainTitle>
@@ -34,13 +29,24 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
+  height: 100%;
   display: flex;
-  justify-content: space-around;
   background-color: ${myTheme.colors.white};
   position: relative;
-  flex-wrap: wrap;
+  gap: 26px;
 
+  ${StyledImage} {
+  }
+  @media ${myTheme.media.tablet} {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   @media ${myTheme.media.mobile} {
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 0 0 0px;
+
     & > *:not(:last-child) {
       padding: 0 32px;
     }
@@ -58,7 +64,7 @@ const StyledHeader = styled.header`
     top: 30px;
     left: 40px;
 
-    @media ${myTheme.media.mobile} {
+    @media ${myTheme.media.desktop.aside} {
       display: none;
     }
   }
@@ -73,6 +79,9 @@ const StyledHeader = styled.header`
     position: absolute;
     bottom: 30px;
     left: 88px;
+    @media ${myTheme.media.tablet} {
+      display: none;
+    }
 
     @media ${myTheme.media.mobile} {
       display: none;
@@ -80,7 +89,13 @@ const StyledHeader = styled.header`
   }
 
   ${FlexWrapper} {
+    padding: 93px 0 0 60px;
+
     @media ${myTheme.media.mobile} {
+      height: 100%;
+      padding: 0 32px;
+    }
+    @media ${myTheme.media.tablet} {
       height: 100%;
     }
 
@@ -99,6 +114,10 @@ const StyledHeader = styled.header`
         top: 52px;
         left: 180px;
       }
+      @media ${myTheme.media.tablet} {
+        top: 52px;
+        left: 150px;
+      }
     }
 
     &::after {
@@ -107,11 +126,13 @@ const StyledHeader = styled.header`
       height: 16px;
       border: 2px #0047ff solid;
       transform: rotate(26deg);
-
       position: absolute;
       bottom: 112px;
       left: 374px;
-
+      @media ${myTheme.media.tablet} {
+        bottom: 630px;
+        left: 60px;
+      }
       @media ${myTheme.media.mobile} {
         bottom: 755px;
         left: 60px;
@@ -122,10 +143,8 @@ const StyledHeader = styled.header`
   ${StyledImage} {
     @media ${myTheme.media.mobile} {
       margin-top: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      object-fit: cover;
+    }
+    @media ${myTheme.media.tablet} {
     }
   }
 `;
@@ -142,6 +161,9 @@ const Greetings = styled.div`
     position: absolute;
     bottom: 71px;
     right: 396px;
+    @media ${myTheme.media.tablet} {
+      display: none;
+    }
     @media ${myTheme.media.mobile} {
       display: none;
     }
@@ -176,6 +198,7 @@ const TextTitle = styled.p`
   font-size: 16;
   font-weight: 400px;
   line-height: 1.3;
+  padding: 18px 100px 25px 0;
   @media ${myTheme.media.mobile} {
     padding: 90px 0 35px 0;
   }
@@ -201,6 +224,9 @@ export const ButtonStyled = styled.button`
     position: absolute;
     bottom: 24px;
     right: 33px;
+    @media ${myTheme.media.tablet} {
+      display: none;
+    }
     @media ${myTheme.media.mobile} {
       display: none;
     }

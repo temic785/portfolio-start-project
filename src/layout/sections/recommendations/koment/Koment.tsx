@@ -38,7 +38,7 @@ export const Koment = (props: CardPropsType) => {
 };
 const KomenStyled = styled.div`
   max-width: 310px;
-
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: ${myTheme.colors.grey.light};

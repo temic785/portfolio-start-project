@@ -4,19 +4,19 @@ import { myTheme } from "../../styles/ThemeStyled";
 import { Menu } from "./Menu";
 import { Icon } from "../icon/icon";
 
-const items = ["home", "services", "education", "portfolio", "blog", "contact"];
+const items = [
+  "moon",
+  "home",
+  "services",
+  "education",
+  "portfolio",
+  "blog",
+  "contact",
+];
 
 export const Navigation = () => {
   return (
     <StyledNavigation>
-      <ButtonImg>
-        <Icon
-          iconId={"moon"}
-          width={"25"}
-          height={"25"}
-          viewBox={"0 0 30 30"}
-        />
-      </ButtonImg>
       <Menu menuItems={items} />
     </StyledNavigation>
   );
@@ -25,20 +25,20 @@ export const Navigation = () => {
 const StyledNavigation = styled.div`
   background-color: ${myTheme.colors.grey.light};
   min-width: 108px;
-  min-height: 1315px;
+  padding-top: 50px;
   position: fixed;
-  right: 0px;
+  right: 0;
+  bottom: 0;
+  top: 0;
   z-index: 1;
 
-  @media ${myTheme.media.tablet} {
-    display: none;
-  }
   @media ${myTheme.media.desktop.nav} {
-    display: none;
+    display: flex;
+    align-items: center;
+    bottom: 0px;
+    top: unset;
+    left: 0;
+    padding: 0;
+    height: 80px;
   }
-`;
-
-const ButtonImg = styled.button`
-  height: 30px;
-  margin: 50px 40px 0 40px;
 `;

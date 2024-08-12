@@ -17,7 +17,7 @@ export const Service = (props: ServicePropsType) => {
         height={"75px"}
         width={"75px"}
         viewBox={"0 0 70px 70px"}
-        color={myTheme.colors.primary}
+        // color={myTheme.colors.primary}
       />
       <ServiceTitle>{props.title}</ServiceTitle>
       <TitleP>{props.description}</TitleP>
@@ -38,6 +38,8 @@ const StyledService = styled.div`
   align-items: center;
 
   flex-grow: 1;
+
+  color: ${myTheme.colors.primary};
 
   @media ${myTheme.media.mobile} {
     max-width: 310px;

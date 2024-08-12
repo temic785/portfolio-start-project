@@ -23,19 +23,28 @@ export const StyledForms = () => {
   );
 };
 const StyledForm = styled.form`
-  width: 100%;
+  width: 570px;
+  max-width: 100%;
   ${TitleSection} {
     text-align: start;
     margin-bottom: 50px;
+    font-size: 30px;
   }
 
   ${FlexWrapper} {
     background-color: ${myTheme.colors.white};
     padding: 25px;
     max-width: 570px;
+    @media ${myTheme.media.desktop.desktop} {
+      max-width: 100%;
+      padding: 25px 28px 32px 27px;
+    }
   }
   textarea {
     resize: none;
+  }
+  @media ${myTheme.media.tablet} {
+    width: 100%;
   }
 `;
 export const TitleNameForm = styled.span`

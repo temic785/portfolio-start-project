@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import sidebarImg from "../../assets/images/profile.webp";
 import styled, { css } from "styled-components";
 import { myTheme } from "../../styles/ThemeStyled";
@@ -24,12 +24,18 @@ const items = [
 ];
 
 export const SidebarMobile = () => {
+  const [asideIsOpen, setasideIsOpen] = useState(false);
+  const onBurgerBtnClick = () => {
+    setasideIsOpen(!asideIsOpen);
+    document.body.style.overflow = asideIsOpen ? "auto" : "hidden";
+  };
   return (
     <StyledAsideMobile>
-      <BurgerButton isOpen={false}>
+      <BurgerButton isOpen={asideIsOpen} onClick={onBurgerBtnClick}>
         <span></span>
       </BurgerButton>
-      <MobileAsidePopup isOpen={false}>
+
+      <MobileAsidePopup isOpen={asideIsOpen}>
         <FlexWrapper direction="column" marg="0 45px 0 40px" height="unset">
           <UserWrapper>
             <CircleWrapper>
@@ -62,7 +68,7 @@ const StyledAsideMobile = styled.aside`
   top: 0;
   left: 15px;
 
-  @media ${myTheme.media.tablet} {
+  @media ${myTheme.media.desktop.aside} {
     display: block;
   }
 `;
@@ -134,8 +140,8 @@ const MobileAsidePopup = styled.div<{ isOpen: boolean }>`
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      overflow-y: auto;
       display: block;
+      overflow-y: auto;
     `}
 `;
 

@@ -4,6 +4,16 @@ import { DescriptionSection } from "../../../components/DescriptionSection";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Card } from "./Card";
 import { myTheme } from "../../../styles/ThemeStyled";
+import React from "react";
+import AliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
+import "../price/sliderPrice.css";
+
+const responsive = {
+  0: { items: 1 },
+  568: { items: 2 },
+  1400: { items: 3 },
+};
 
 const cardItems = [
   { icon: "check", span: "UI Design" },
@@ -37,6 +47,29 @@ const cardItems3 = [
   { icon: "check", span: "20 gB bandwith" },
 ];
 
+const items = [
+  <Card
+    title="Silver"
+    price="0.00"
+    description="For most businesses that want to optimize web queries"
+    menuCardItems={cardItems}
+  />,
+  <Card
+    title="Gold"
+    price="50.00"
+    description="For most businesses that want to optimize web queries"
+    myBtnType={myTheme.colors.primary}
+    menuCardItems={cardItems2}
+    mostPop="Most Popular"
+  />,
+  <Card
+    title="Dimond"
+    price="80.00"
+    description="For most businesses that want to optimize web queries"
+    menuCardItems={cardItems3}
+  />,
+];
+
 export const PricePlans = () => {
   return (
     <StyledPrice>
@@ -47,6 +80,7 @@ export const PricePlans = () => {
           sint. Velit officia consequat duis enim velit mollit. lorem ipsum
         </DescriptionSection>
         <FlexWrapper
+          className="cards"
           justify="space-between"
           width="100%"
           wrap="wrap"
@@ -73,8 +107,29 @@ export const PricePlans = () => {
             menuCardItems={cardItems3}
           />
         </FlexWrapper>
+        <StyledCarouselContainer>
+          <AliceCarousel
+            mouseTracking
+            items={items}
+            responsive={responsive}
+            controlsStrategy="alternate"
+          />
+        </StyledCarouselContainer>
       </FlexWrapper>
     </StyledPrice>
   );
 };
-const StyledPrice = styled.section``;
+const StyledPrice = styled.section`
+  .cards {
+    @media ${myTheme.media.slider} {
+      display: none;
+    }
+  }
+`;
+const StyledCarouselContainer = styled.div`
+  width: 100%;
+  display: none;
+  @media ${myTheme.media.slider} {
+    display: block;
+  }
+`;

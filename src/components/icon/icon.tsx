@@ -14,11 +14,12 @@ type IconPropsType = {
 export const Icon = (props: IconPropsType) => {
   return (
     <StyledSvg
+      className="icon"
       width={props.width || "25"}
       height={props.height || "25"}
       viewBox={props.viewBox || "0 0 25 25"}
       fill="none"
-      stroke={props.color}
+      // stroke={props.color}
       xmlns="http://www.w3.org/2000/svg"
     >
       <use xlinkHref={`${iconsSprite}#${props.iconId}`} />

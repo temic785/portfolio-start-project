@@ -30,8 +30,14 @@ const BlogCardStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   background-color: ${myTheme.colors.white};
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 310px;
   ${TitleP} {
     padding: 8px 0;
+  }
+  ${StyledImage} {
+    margin: 0 auto;
   }
 `;
 const BlockInfo = styled.div`

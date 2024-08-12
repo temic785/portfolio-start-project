@@ -17,4 +17,9 @@ export const YourInfo = () => {
 const YourInfoStyled = styled.section`
   display: flex;
   direction: column;
+  width: 100%;
+  gap: 30px;
+  ${TitleSection} {
+    font-size: 26px;
+  }
 `;

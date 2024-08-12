@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { myTheme } from "../../../styles/ThemeStyled";
 
 export const MyMap = () => {
   return (
@@ -14,5 +15,19 @@ export const MyMap = () => {
   );
 };
 const StyledMyMap = styled.div`
-  padding: 70px 0;
+  margin: 70px 0;
+  position: relative;
+
+  @media ${myTheme.media.mobile} {
+    height: 300px;
+    width: 375px;
+
+    iframe {
+      width: 375px;
+      height: 300px;
+      position: absolute;
+      left: -15px;
+      top: 0px;
+    }
+  }
 `;

@@ -3,12 +3,14 @@ import styled from "styled-components";
 import { TitleSection } from "../../../../components/TitleSection";
 import { CardContact } from "./CardContackt";
 import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { myTheme } from "../../../../styles/ThemeStyled";
+import { font } from "../../../../styles/Common";
 
 export const Contact = () => {
   return (
     <ContactStyled>
       <TitleSection>Contact information</TitleSection>
-      <FlexWrapper direction="column" gap="18px" height="unset">
+      <FlexWrapper direction="column" gap="18px" maxHeight="665px">
         <CardContact
           iconId="map"
           contInf1="Country:"
@@ -42,9 +44,15 @@ export const Contact = () => {
 };
 
 const ContactStyled = styled.div`
-  min-width: 370px;
+  max-width: 100%;
+  width: 370px;
   ${TitleSection} {
     text-align: start;
     margin-bottom: 50px;
+    font-size: 30px;
+  }
+
+  @media ${myTheme.media.tablet} {
+    display: none;
   }
 `;

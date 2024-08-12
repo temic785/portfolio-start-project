@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyledImage } from "../../../../components/StyledImage.styled";
 import mainImage from "../../../../assets/images/portfolio6.webp";
 import styled from "styled-components";
@@ -6,9 +6,11 @@ import { myTheme } from "../../../../styles/ThemeStyled";
 
 type CardPortfolioPropsType = {
   srcImg: string;
+  type: string;
 };
 
 export const CardPortfolio = (props: CardPortfolioPropsType) => {
+  const [currentFilterStatus, setCurrentFilterStatus] = useState("all");
   return (
     <CardPortfolioStyled>
       <StyledImage src={props.srcImg} width="100%" height="300px"></StyledImage>
