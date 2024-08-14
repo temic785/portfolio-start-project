@@ -102,10 +102,12 @@ const ElStyled = styled.li<{ isFirst: boolean }>`
     width: ${(props) => (props.isFirst ? "25px" : "40px")};
     height: ${(props) => (props.isFirst ? "25px" : "40px")};
     background-color: ${(props) => (props.isFirst ? "transparent" : "40px")};
+    transition: ${myTheme.animations.transition};
 
     &:hover {
       background-color: ${(props) =>
         props.isFirst ? "transparent" : myTheme.colors.primary};
+      transform: translateY(-4px);
     }
   }
 `;

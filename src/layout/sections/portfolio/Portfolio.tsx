@@ -110,44 +110,59 @@ export const Portfolio: React.FC = () => {
 const PortfolioStyled = styled.section``;
 const CardPortfolio = styled.div`
   width: 310px;
-
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   cursor: pointer;
   position: relative;
 
-  ${StyledImage} {
-    @media ${myTheme.media.mobile} {
-      width: 310px;
-      margin: 0 auto;
-    }
+  &::before,
+  &::after {
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: ${myTheme.colors.primary};
+    opacity: 0;
+  }
+
+  &::after {
+    content: "+";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: ${myTheme.colors.secondary};
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: scale(0.8);
   }
 
   &:hover {
     &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: ${myTheme.colors.primary};
-      opacity: 85%;
+      opacity: 0.85;
     }
-    &:after {
-      content: "+";
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 4rem;
-      color: ${myTheme.colors.secondary};
 
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
+    &::after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  ${StyledImage} {
+    @media ${myTheme.media.mobile} {
+      width: 310px;
+      margin: 0 auto;
     }
   }
 `;

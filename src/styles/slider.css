@@ -12,6 +12,7 @@
 }
 .alice-carousel__dots-item:not(.__custom):hover {
   background-color: rgba(255, 179, 0, 1);
+  transition: 0.2s ease-in-out;
 }
 .alice-carousel__dots-item:not(.__custom).__active {
   background-color: rgba(255, 179, 0, 1);

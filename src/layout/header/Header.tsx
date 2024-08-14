@@ -224,15 +224,18 @@ const TextTitle = styled.p`
   }
 `;
 export const ButtonStyled = styled.button`
-  max-width: 154px;
-  min-height: 51px;
-  color: ${myTheme.colors.secondary};
+  width: 154px;
+  height: 50px;
   font-size: 16px;
-  text-transform: uppercase;
   background-color: ${myTheme.colors.primary};
   font-weight: 500;
   border-radius: 5px;
+  transition: ${myTheme.animations.transition};
 
+  &:hover {
+    width: 170px;
+    height: 65px;
+  }
   &::after {
     content: "";
     width: 16px;

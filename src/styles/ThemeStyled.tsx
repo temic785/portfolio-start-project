@@ -20,4 +20,7 @@ export const myTheme = {
     },
     slider: "screen and (max-width: 1399px)",
   },
+  animations: {
+    transition: ".2s ease-in-out",
+  },
 };

@@ -96,11 +96,12 @@ const CircleWrapper = styled.div`
 const StyledButtonCV = styled.button`
   position: relative;
   background-color: ${myTheme.colors.primary};
-  min-height: 40px;
+  height: 40px;
   font-size: 14px;
   font-weight: 600;
   z-index: 0;
   margin-bottom: 25px;
+  transition: ${myTheme.animations.transition};
 
   &::before {
     content: "";
@@ -125,5 +126,8 @@ const StyledButtonCV = styled.button`
     position: absolute;
     top: 15px;
     right: 30px;
+  }
+  &:hover {
+    height: 50px;
   }
 `;

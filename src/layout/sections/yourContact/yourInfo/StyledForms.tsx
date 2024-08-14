@@ -64,7 +64,12 @@ const Field = styled.input`
 `;
 export const StyledButton = styled.button`
   background-color: ${myTheme.colors.primary};
-  max-width: 160px;
-  min-height: 35px;
+  width: 160px;
+  height: 35px;
   font-weight: 600;
+  transition: ${myTheme.animations.transition};
+
+  &:hover {
+    width: 180px;
+  }
 `;

@@ -52,9 +52,8 @@ export const Services = () => {
   );
 };
 const StyledServices = styled.section`
-  background-color: ${myTheme.colors.grey.medium};
-  padding: 140px 0 0 0;
+  margin: 140px 0 0 0;
   @media ${myTheme.media.mobile} {
-    padding-top: 85px;
+    margin-top: 85px;
   }
 `;

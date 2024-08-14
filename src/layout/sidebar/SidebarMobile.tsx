@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import sidebarImg from "../../assets/images/profile.webp";
 import styled, { css } from "styled-components";
 import { myTheme } from "../../styles/ThemeStyled";
@@ -29,12 +29,27 @@ export const SidebarMobile = () => {
     setasideIsOpen(!asideIsOpen);
     document.body.style.overflow = asideIsOpen ? "auto" : "hidden";
   };
+
+  const [showBtn, setShowBtn] = useState(true);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 1) {
+        setShowBtn(false);
+      } else {
+        setShowBtn(true);
+      }
+    });
+  });
+
   return (
     <StyledAsideMobile>
-      <BurgerButton isOpen={asideIsOpen} onClick={onBurgerBtnClick}>
-        <span></span>
-      </BurgerButton>
-
+      <>
+        {showBtn && (
+          <BurgerButton isOpen={asideIsOpen} onClick={onBurgerBtnClick}>
+            <span></span>
+          </BurgerButton>
+        )}
+      </>
       <MobileAsidePopup isOpen={asideIsOpen}>
         <FlexWrapper direction="column" marg="0 45px 0 40px" height="unset">
           <UserWrapper>
@@ -80,6 +95,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   width: 90px;
   height: 80px;
   z-index: 999999999;
+  transition: ${myTheme.animations.transition};
 
   span {
     display: block;
@@ -89,6 +105,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: absolute;
     left: 30px;
     top: 42px;
+    transition: ${myTheme.animations.transition};
 
     ${(props) =>
       props.isOpen &&
@@ -97,6 +114,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       `}
 
     &::before {
+      transition: ${myTheme.animations.transition};
+
       content: "";
       display: block;
       width: 30px;
@@ -112,6 +131,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     }
     &::after {
       content: "";
+      transition: ${myTheme.animations.transition};
+
       display: block;
       width: 30px;
       height: 2px;
@@ -135,14 +156,16 @@ const MobileAsidePopup = styled.div<{ isOpen: boolean }>`
   left: 0;
   z-index: 99999;
   background-color: ${myTheme.colors.white};
-  display: none;
-
+  transform: translateY(-150%);
+  transition: 1s ease-in-out;
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
       display: block;
       overflow-y: auto;
-    `}
+      height: 100vh;
+      transform: translateY(0);
+    `};
 `;
 
 const UserWrapper = styled.div`

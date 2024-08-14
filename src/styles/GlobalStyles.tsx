@@ -25,7 +25,7 @@ export const GlobalStyles = createGlobalStyle`
     text-transform: capitalize;
     }
 
-    section{
+    section:nth-of-type(n+2) {  
         padding:70px 0 0 0;
     }
     

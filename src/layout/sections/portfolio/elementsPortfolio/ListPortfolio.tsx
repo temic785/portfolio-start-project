@@ -42,6 +42,7 @@ const ListPortfolioStyled = styled.a`
 const LiElStyled = styled.li<{ active: boolean }>`
   cursor: pointer;
   ${font({ weight: 500, Fmax: 18, Fmin: 12 })}
+  transition: ${myTheme.animations.transition};
 
   &:hover {
     color: ${myTheme.colors.primary};

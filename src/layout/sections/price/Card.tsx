@@ -97,16 +97,18 @@ const TextCard = styled.p`
 `;
 
 const PriceButton = styled.button<PriceButtonProps>`
-  min-width: 169px;
-  min-height: 38px;
-
+  width: 170px;
+  height: 38px;
   font-size: 14px;
   font-weight: 700;
   color: ${myTheme.colors.secondary};
-
   border-radius: 30px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
   margin: 20px 0 25px;
   background-color: ${(props) => props.myBtnType};
+  transition: ${myTheme.animations.transition};
+  &:hover {
+    width: 180px;
+    height: 50px;
+  }
 `;

@@ -36,78 +36,17 @@ const SocialList = styled.ul`
 `;
 const SocialEl = styled.li``;
 const SocialLink = styled.a`
-  position: relative;
-  z-index: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: ${myTheme.colors.primary};
+  transition: ${myTheme.animations.transition};
 
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: ${myTheme.colors.primary};
-
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    top: 45%;
-    transform: translate(-50%, -50%);
+  &:hover {
+    transform: translateY(-4px);
+    color: red;
   }
 `;
-
-// export const ListSocial = () => {
-//   return (
-//     <StyledListLink>
-//       <SocialItem>
-//         <SocialLink>
-//           <Icon
-//             iconId={"facebook"}
-//             width={"24px"}
-//             height={"24px"}
-//             viewBox={"0 0 24px 24px"}
-//           ></Icon>
-//         </SocialLink>
-//         <SocialLink>
-//           <Icon
-//             iconId={"instagram"}
-//             width={"24px"}
-//             height={"24px"}
-//             viewBox={"0 0 24px 24px"}
-//           ></Icon>
-//         </SocialLink>
-//         <SocialLink>
-//           <Icon
-//             iconId={"twitter"}
-//             width={"24px"}
-//             height={"24px"}
-//             viewBox={"0 0 24px 24px"}
-//           ></Icon>
-//         </SocialLink>
-//         <SocialLink>
-//           <Icon
-//             iconId={"linkedIn"}
-//             width={"24px"}
-//             height={"24px"}
-//             viewBox={"0 0 24px 24px"}
-//           ></Icon>
-//         </SocialLink>
-//         <SocialLink>
-//           <Icon
-//             iconId={"youtube"}
-//             width={"24px"}
-//             height={"24px"}
-//             viewBox={"0 0 24px 24px"}
-//           ></Icon>
-//         </SocialLink>
-//         <SocialLink>
-//           <Icon
-//             iconId={"dribbble"}
-//             width={"24px"}
-//             height={"24px"}
-//             viewBox={"0 0 24px 24px"}
-//           ></Icon>
-//         </SocialLink>
-//       </SocialItem>
-//     </StyledListLink>
-//   );
-// };
